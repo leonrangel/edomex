@@ -1,0 +1,63 @@
+<div class="wrapper">
+  <div class="cols-16">
+    <div class="col col-11">
+      <div class="col-inner">
+        <div class="box-container mb">
+          <div class="box-header">
+            <h3>Datos del Jugador</h3>
+           <!--  <a href="https://www.somosfut.com/#register/profile"><b>Editar Datos</b> 
+            </a>-->
+          </div>
+          <div class="box-main">
+           <div class="soccer-id"> <a href="#" onclick="window.open('http://soccerid.co', '_system');"> 
+<p class="players-login">¿Eres tú? <br><b>¡Reclama tu SOCCER iD!</b> </p> 
+</a></div></div>
+            <div class="information-list info-blur">
+              <ul>
+                <li class="w-counter">
+                  <h5>Posición</h5>
+                  <span class="counter"><b>{{info.position}}</b></span>
+                </li>
+                <li class="w-counter">
+                  <h5>Edad</h5>
+                  <span class="counter"><b>{{dateFromNow info.birthday 'years'}}</b></span>
+                </li>
+                <li class="w-counter">
+                  <h5>Estatura</h5>
+                  <span class="counter"><b>{{info.stature}} cm</b></span>
+                </li>
+               
+               
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col col-5">
+      <div class="col-inner">
+        <div class="box-container">
+           <div class="box-header">
+            <h3>Equipos</h3>
+          </div>
+          <div class="box-main">
+            <div class="links-list">
+              <ul>
+                {{#each teams}}
+                <li>
+                  <a href="#equipo/{{url}}">
+                    <span class="img"
+                          style="background-image:url('https://www.somosfut.com/team/{{_id}}/avatar');"></span>
+                    <span class="h5">{{name}}</span>
+                  </a>
+                </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

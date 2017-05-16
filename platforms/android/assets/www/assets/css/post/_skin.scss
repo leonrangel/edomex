@@ -1,0 +1,65 @@
+.new-post {
+  @include secondary-box-style;  
+
+  .main {
+    textarea {
+      border: 0;
+      resize: none;
+      background: transparent;
+      outline: none;
+    }
+  }
+
+  .footer {
+    background-color: #fcfcfa;
+    border-top: 1px solid #dfdfdf;
+    border-radius: 0 0 $radius $radius;
+  }
+}
+
+.posts-list {
+  @include secondary-box-style;
+
+  .post {
+    border-top: 1px solid $separator-color;
+    
+    pre {
+      word-wrap: break-word;
+      font-family: $primary-font;
+    }
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+
+  .loading {
+    text-align: center;
+    border-top: 1px solid $separator-color;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: $gray-color;
+  }
+}
+
+.post {
+  .author-name h6 {
+    font-size: 14px;
+  }
+
+  .date {
+    font-size: 11px;
+    font-family: $secondary-font;
+    color: $meta-color;
+  }
+
+  .post-main {
+    @include text-size-small;
+    font-family: $secondary-font;
+
+    p {
+      @include text-size-small;      
+      font-family: $secondary-font;
+    }
+  }
+}

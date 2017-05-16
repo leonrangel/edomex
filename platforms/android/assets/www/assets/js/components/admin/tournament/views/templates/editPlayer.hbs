@@ -1,0 +1,166 @@
+<div class="modal fade">
+  <div class="modal-dialog register-user-modal">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!-- Content -->
+        <form class="user-form" method="post">
+          <div class="header">
+            <h2>Editar Jugador</h2>
+          </div>
+          <div class="content">
+            <div class="form-section no-border">
+              <div class="label">
+                <label for=""> 
+                  Cambiar Avatar: 
+                </label>
+              </div>
+              <div class="main">
+                <div id="display-avatar" style="background-image: url('https://www.somosfut.com/user/{{_id}}/avatar'); border-radius: 2px; background-size: cover; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 0px 1px; width: 82px; height: 82px; border: 4px solid rgb(255, 255, 255);"></div>
+                <input name="avatar" type="file" data-validator-error="">
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">Nombre: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="name"
+                       placeholder="Nombre"
+                       data-validator-required value="{{name}}">
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">Apellido Paterno: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="lastnameFather"
+                       placeholder="Apellido Paterno"
+                       data-validator-required value="{{lastnameFather}}">
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">Apellido Materno: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="lastnameMother"
+                       placeholder="Apellido Materno"
+                       data-validator-required value="{{lastnameMother}}">
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">Correo Electrónico: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="email"
+                       placeholder="Correo Electrónico"
+                       data-validator-required value="{{email}}">
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">Teléfono: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="mobile"
+                       placeholder="Teléfono"
+                       data-validator-required value="{{mobile}}">
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">Edad: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="age"
+                       placeholder="Edad"
+                       data-validator-required value="{{extras.age}}">
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">IFE / INE: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <div id="display-ife" style="background-image: url('https://www.somosfut.com/user/{{_id}}/ife'); border-radius: 2px; background-size: cover; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 0px 1px; width: 82px; height: 82px; border: 4px solid rgb(255, 255, 255);"></div>
+                <input name="ife" type="file" data-validator-error="">
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">Dirección: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="address"
+                       placeholder="Dirección"
+                       data-validator-required value="{{extras.address}}">
+              </div>
+            </div>
+           
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">Número: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="number"
+                       placeholder="Número"
+                       data-validator-required value="{{info.number}}">
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">Posición: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" list="listPositions" 
+                       name="position"
+                       placeholder="Posición"
+                       data-validator-required value="{{info.position}}">
+                <datalist id="listPositions">
+                  <option value="Portero">
+                  <option value="Defensa">
+                  <option value="Medio">
+                  <option value="Delantero">
+                </datalist>
+              </div>
+            </div>
+
+          </div>
+          <div class="footer">
+            <button id="saveChanges" class="btn btn-primary btn-medium submit">Guardar Cambios</button>
+            <div class="clr"></div>
+          </div>
+        </form>
+        <div class="user-form">
+          <div class="content">
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="" >Eliminar :
+                </label>
+              </div>
+              <div class="main">
+                <div class="alert alert-danger" style="color: #a94442;background-color: #f2dede;border-color: #ebccd1;">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  Eliminar jugador : 
+                  <button id="deletePlayer" class="btn btn-secondary">Eliminar ahora</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- / Content -->
+      </div>
+    </div>
+  </div>
+</div>
+

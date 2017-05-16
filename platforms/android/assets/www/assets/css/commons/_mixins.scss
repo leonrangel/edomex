@@ -1,0 +1,117 @@
+@mixin container-shadow () {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+}
+
+@mixin pack-background () {
+  background-image: url('../img/background/pack.png');
+}
+
+@mixin cover-background () {
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+@mixin primary-box-style () {
+  background: #474747; 
+  background: rgba(73, 73, 73, .90);
+  border-radius: $radius;
+  @include container-shadow;
+}
+
+@mixin hover-background () {
+  background: tint($primary-color, 98%);
+}  
+
+@mixin secondary-box-style () {
+  background-color: $white-color;
+  border-radius: $radius;
+  @include container-shadow;
+}
+
+@mixin text-size-x-small () {
+  font-size: 11px;
+  line-height: 16px;
+} 
+
+@mixin text-size-small () {
+  font-size: 13px;
+  line-height: 19px;
+} 
+
+@mixin text-size-regular () {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+@mixin text-size-medium () {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin text-size-large () {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin footer-content {
+  padding: 10px;
+  position: relative;
+  background: #fbfbf7;
+  border-top: 1px solid #e6e6e1;
+  @include clearfix;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: #{alpha(opacity=$opacity-ie)};
+}
+
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+      -ms-transform: translate($x, $y);
+       -o-transform: translate($x, $y);
+          transform: translate($x, $y);
+}
+
+@mixin transition-transform($transition...) {
+  -webkit-transition: -webkit-transform $transition;
+     -moz-transition: -moz-transform $transition;
+       -o-transition: -o-transform $transition;
+          transition: transform $transition;
+}
+
+@mixin alert-variant($background, $border, $text-color) {
+  background-color: $background;
+  border-color: $border;
+  color: $text-color;
+
+  hr {
+    border-top-color: darken($border, 5%);
+  }
+  .alert-link {
+    color: darken($text-color, 10%);
+  }
+}
+
+@mixin nav-divider($color: #e5e5e5) {
+  height: 1px;
+  margin: ((1.4 / 2) - 1) 0;
+  overflow: hidden;
+  background-color: $color;
+}
+
+@mixin reset-filter() {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}

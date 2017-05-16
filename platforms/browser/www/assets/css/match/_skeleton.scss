@@ -1,0 +1,171 @@
+.match-overview {
+  position: relative;
+
+  &-header {
+    @include clearfix;
+
+    .team {
+      width: 50%;
+      position: relative;
+
+      &-inner {
+        padding: 35px 20px;
+      }
+
+      h3 {
+        margin-top: 10px;
+      }
+    }
+
+    .tl {
+      float: left;
+
+      .score {
+        right: 35px;
+      }
+    }
+
+    .tr {
+      float: right;
+
+      .score {
+        left: 35px;
+      }
+    }
+
+    .score {
+      position: absolute;
+      top: 50%;
+      margin-top: -20px;
+    }
+  }
+
+  .match-scores {
+    width: 220px;
+    position: absolute;
+    left: 50%;
+    margin-left: -110px;
+    top: 90px;
+
+    .vs {
+      padding: 0 10px;
+    }
+  }
+
+  &-main {
+    @include clearfix; 
+
+    .match-team-stats {
+      width: 50%;
+
+      &.tl {
+        float: left;
+        margin-right: -1px;
+      }
+
+      &.tr {
+        float: right;
+        margin-right: -1px;
+
+        .match-players li {
+          img {
+            margin-left: 5px;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .stats-section {
+    padding: 20px;
+    @include clearfix;
+
+    h4 {
+      margin-bottom: 10px;
+    }
+
+    .match-players li {
+      padding: 10px 0;
+
+      img {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+#leagueMatchesList .matches-list:empty::before {
+   content: 'No hay partidos para hoy';
+   text-align: center;
+   padding-top: 45px;
+   font-size: 20px;
+   font-weight: lighter;
+   color: black;
+   display: block;
+   height: 100px; 
+   /* los demas estilos de como se debe mirar el mensaje */
+}
+
+#leagueContent .photos ul:empty::before {
+   content: 'No hay fotos que mostrar';
+   color: #fff;
+   text-align: center;
+   padding-top: 45px;
+   font-size: 20px;
+   font-weight: lighter;
+   color: black;
+   display: block;
+   height: 100px; 
+   /* los demas estilos de como se debe mirar el mensaje */
+}
+
+#leagueSidebar .recent-photos-thumbs ul:empty::before {
+   content: 'No hay fotos que mostrar';
+   color: #fff;
+   text-align: center;
+   padding-top: 45px;
+   font-size: 20px;
+   font-weight: lighter;
+   color: black;
+   display: block;
+   height: 100px; 
+   /* los demas estilos de como se debe mirar el mensaje */
+}
+
+#leagueContent .content-list ul:empty::before {
+   content: 'No hay noticias que mostrar';
+   text-align: center;
+   padding-top: 45px;
+   font-size: 20px;
+   font-weight: lighter;
+   color: black;
+   display: block;
+   height: 100px; 
+   /* los demas estilos de como se debe mirar el mensaje */
+}
+
+#leagueSidebar .links-list ul:empty::before {
+   content: 'No hay noticias que mostrar';
+   text-align: center;
+   padding-top: 45px;
+   font-size: 20px;
+   font-weight: lighter;
+   color: black;
+   display: block;
+   height: 100px; 
+   /* los demas estilos de como se debe mirar el mensaje */
+}
+
+#leagueContent .box-main pre:empty::before {
+   content: 'No se he especificado un reglamento';
+   text-align: center;
+   padding-top: 45px;
+   font-size: 20px;
+   font-weight: lighter;
+   color: black;
+   display: block;
+   height: 100px; 
+   /* los demas estilos de como se debe mirar el mensaje */
+}
+

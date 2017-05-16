@@ -1,0 +1,261 @@
+
+.landing {
+  &.players {
+    background-color: #f7f7f7;
+  }
+}
+
+.landing-header {
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .1);
+  background: rgba(0, 0, 0, .2);
+
+  .site-navigation {
+
+    ul li a {
+      opacity: .9;
+      color: $white-color;
+      border-bottom: 2px solid transparent;
+
+      &.active {
+        border-bottom-color: $white-color;
+        opacity: 1;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .user-menu-wrapper ul li a {
+    font-size: 12px;
+    color: $white-color;
+
+    @include max-screen(760px) {
+          font-size: 9px;
+    }
+
+
+
+    &.signup {
+      background: $primary-color;
+      border-radius: $radius;
+    }
+  }
+
+  &.dark {
+    @include primary-box-style;
+  }
+}
+
+.intro-page {
+  @include cover-background;
+
+  h1 {
+    color: $white-color;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+  }
+
+  &.principal {
+    background-image: url('../img/background/landing-principal-intro.png');
+  }
+
+  &.players {
+    background-image: url('../img/background/landing-players-intro.png');
+  }
+
+  &.teams {
+    background-image: url('../img/background/landing-teams-intro.png');  
+  }
+  
+  &.leagues {
+    background-image: url('../img/background/landing-leagues-intro.png');  
+  }
+
+  &.contact {
+    background-image: url('../img/background/landing-contact-intro.png');  
+  }
+}
+
+
+
+
+.subscribe-button {
+  input {
+    outline: none;
+    border-radius: $radius;
+
+    &:focus {
+      border-color: $primary-color;
+    }
+  }
+
+  &.dark input {
+    color: $white-color;
+    background-color: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .3);
+  }
+
+  &.light {
+    input {
+      color: $text-color;
+      background-color: $white-color;
+      border: 1px solid #d2d2d2;
+    }
+
+    .message {
+      font-family: $helvetica;
+
+      &.success {
+        color: green;
+      }
+
+      &.error {
+        color: red;
+      }
+    }
+  }
+
+  .message {
+    font-family: $helvetica;
+    color: $white-color;
+  }
+}
+
+.sections-title {
+  text-align: center; 
+}
+
+// Home Landing Page
+.home-intro {
+
+ @include max-screen(650px) {
+  margin-top: -50px;
+    
+      }  
+
+  h1 {
+    font-size: 48px;  
+     @include max-screen(830px) {
+    font-size: 38px;
+      }  
+
+       @include max-screen(650px) {
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+      }  
+  }
+
+  p {
+    color: $white-color;
+    font-family: $helvetica;
+    @include text-size-large;
+
+     @include max-screen(650px) {
+    text-align: center; 
+    font-size: 14px;
+    
+      }  
+
+  }
+
+  #countdown {
+    .countdown-section {
+      text-align: center;
+
+      .countdown-amount {
+        font-family: $helvetica;
+        font-weight: bold;
+        font-size: 34px;
+        color: $white-color;
+      }
+
+      .countdown-period {
+        font-size: 11px;
+        text-transform: uppercase;
+        color: $white-color;
+        opacity: .7;
+      }
+    }
+  }
+}
+
+.home-features {
+  background: #f7f7f7;
+  padding: 60px 0;
+
+  .home-features-title {
+    text-align: center;
+
+    h2 {
+      font-size: 26px;
+    }
+  }
+
+  .home-feature {
+    background-color: $white-color;
+    border-radius: $radius;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    text-align: center;
+
+    h5 {
+      font-size: 20px;
+    }
+
+    p {
+      font-family: $helvetica;
+      @include text-size-small;
+    }
+  } 
+}
+
+.subscribe-platforms {
+  background-color: #ebefde;
+  border: 1px solid #d6ddc0;
+  border-width: 1px 0 1px 0;
+
+  h5 {
+    font-size: 20px;
+  }
+}
+
+.profile-intro {
+
+  h1 {
+    font-size: 38px;
+  }
+  p {
+    color: $white-color;
+    font-family: $helvetica;
+    opacity: .9;
+    @include text-size-medium;
+  } 
+
+  @include max-screen(550px) {
+    text-align: center;
+  }
+}
+
+.profile-features {
+  .profile-feature {
+    background-color: $white-color;
+    border-radius: $radius;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    text-align: center;
+
+    h4 {
+      font-size: 22px;
+    }
+
+    p {
+      font-family: $helvetica;
+      @include text-size-regular;     
+    }
+
+    ul li {
+      font-family: $helvetica;
+      color: $text-color;
+    } 
+  }
+}

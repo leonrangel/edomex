@@ -1,0 +1,186 @@
+<div class="col-inner">
+  <div class="box-container mb">
+    <div class="box-header">
+      <h2>Resultados del partido</h2>
+    </div>
+    <form method="post">
+      <div class="box-main">
+        <div class="match-statistics">
+          <div class="team">
+            <div class="inner">
+              <div class="section">
+                <div class="team-extract">
+                  <span class="img" style="background-image:url('https://www.somosfut.com/team/{{match.teamA._id}}/avatar');"></span>
+                  <div class="team-details">
+                    <h4 class="name">{{match.teamA.name}}</h4>
+                    <input type="text"
+                           name="goalsA"
+                           class="small goals"
+                           data-validator-required
+                           data-validator-integer
+                           placeholder="Goles">
+                    <input type="text"
+                           name="yCardsA"
+                           class="small goals"
+                           data-validator-required
+                           data-validator-integer
+                           placeholder="Amonestados">
+                    <input type="text"
+                           name="rCardsA"
+                           class="small goals"
+                           data-validator-required
+                           data-validator-integer
+                           placeholder="Expulsados">
+                  </div>
+                </div>
+              </div>
+              <div class="section">
+                <div class="head">
+                  <h6><b>Goles</b></h6>
+                  <div class="actions">
+                  </div>
+                </div>
+                <ul class="players goalsA">
+                </ul>
+              </div>
+              <div class="section">
+                <div class="head">
+                  <h6><b>Amonestados</b></h6>
+                  <div class="actions">
+                  </div>
+                </div>
+                <ul class="players yCardsA">
+                </ul>
+              </div>
+              <div class="section">
+                <div class="head">
+                  <h6><b>Expulsados</b></h6>
+                  <div class="actions">
+                  </div>
+                </div>
+                <ul class="players rCardsA">
+                </ul>
+              </div>
+              <div class="section">
+                <div class="head">
+                 <h6><b>Puntos Extra (+ / -)</b></h6>
+                  <div class="actions">
+                    <br>
+                    <input class="small " style="width:150px;" type="number" name="dynPointsA" min="-50" max="50" step="1" placeholder="Número de puntos (+ / -)" value="{{match.results.dynPointsA}}"> </br> 
+                    <input class="small " style="width:150px;" type="text" name="dynPointsStrA" placeholder="Motivo"  value="{{match.results.dynPointsStrA}}" >
+                  </div>
+                </div>
+                <ul class="players rCardsA">
+                </ul>
+              </div>
+              <!-- <div class="section">
+                <div class="head">
+                  <h6>Arbitraje</h6>
+                  <div class="actions">
+                    <label>
+                      <input type="radio" name="servicesA" value="1">
+                      Pagado
+                    </label>
+                    <label>
+                      <input type="radio" name="servicesA" value="0">
+                      Adeudo
+                    </label>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <div class="team">
+            <div class="inner">
+              <div class="section">
+                <div class="team-extract">
+                  <span class="img" style="background-image:url('https://www.somosfut.com/team/{{match.teamB._id}}/avatar');"></span>
+                  <div class="team-details">
+                    <h4 class="name">{{match.teamB.name}}</h4>
+                    <input type="text"
+                           name="goalsB"
+                           class="small goals"
+                           data-validator-required
+                           data-validator-integer
+                           placeholder="Goles">
+                    <input type="text"
+                           name="yCardsB"
+                           class="small goals"
+                           data-validator-required
+                           data-validator-integer
+                           placeholder="Amonestados">
+                    <input type="text"
+                           name="rCardsB"
+                           class="small goals"
+                           data-validator-required
+                           data-validator-integer
+                           placeholder="Expulsados">
+                  </div>
+                </div>
+              </div>
+              <div class="section">
+                <div class="head">
+                  <h6><b>Goles</b></h6>
+                  <div class="actions">
+                  </div>
+                </div>
+                <ul class="players goalsB">
+                </ul>
+              </div>
+              <div class="section">
+                <div class="head">
+                  <h6><b>Amonestados</b></h6>
+                  <div class="actions">
+                  </div>
+                </div>
+                <ul class="players yCardsB">
+                </ul>
+              </div>
+              <div class="section">
+                <div class="head">
+                  <h6><b>Expulsados</b></h6>
+                  <div class="actions">
+                  </div>
+                </div>
+                <ul class="players rCardsB">
+                </ul>
+              </div>
+              <div class="section">
+                <div class="head">
+                  <h6><b>Puntos Extra (+ / -)</b></h6>
+                  <div class="actions">
+                    <br>
+                    <input class="small " style="width:150px;" type="number" name="dynPointsB" min="-50" max="50" step="1" placeholder="Número de puntos (+ / -)" value="{{match.results.dynPointsB}}"> </br> 
+                    <input class="small " style="width:150px;" type="text" name="dynPointsStrB" placeholder="Motivo"  value="{{match.results.dynPointsStrB}}" >
+                  </div>
+                </div>
+                <ul class="players rCardsB">
+                </ul>
+              </div>
+              <!-- <div class="section">
+                <div class="head">
+                  <h6>Arbitraje</h6>
+                  <div class="actions">
+                    <label>
+                      <input type="radio" name="servicesB" value="1">
+                      Pagado
+                    </label>
+                    <label>
+                      <input type="radio" name="servicesB" value="0">
+                      Adeudo
+                    </label>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box-footer">
+        <span class="btn btn-secondary cancel">Cancelar</span>
+        <span class="btn btn-secondary clear">Reiniciar</span>
+        <span class="btn btn-primary save">Guardar resultado</span>
+      </div>
+    </form>
+  </div>
+</div>

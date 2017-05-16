@@ -1,0 +1,52 @@
+<div class="wrapper">
+  <div class="cols-16">
+    <div class="col col-16">
+      <div class="col-inner">
+        <header class="header-inner">
+          <div class="brand">
+            <a href="#" title="SomosFut"><i class="i somos-brand"></i></a>
+          </div>
+          <nav class="site-navigation">
+            <ul>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Equipos</a>
+                <ul class="dropdown-menu dropdown-menu-left">
+                  {{#each teams}}
+                  <li>
+                    <a href="#team/home/{{_id}}">{{name}}</a>
+                  </li>
+                  {{/each}}
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Ligas</a>
+                <ul class="dropdown-menu dropdown-menu-left">
+                  {{#each leagues}}
+                  <li>
+                    <a href="#liga/{{url}}">{{name}}</a>
+                  </li>
+                  {{/each}}
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="header-user-box dropdown">
+            <div class="user-box-inner dropdown-toggle">
+              <span class="user-avatar"></span>
+              <div class="arrow"></div>
+            </div>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a class="profile-url" href="#jugador/{{url}}">Ver mi Perfil</a></li>
+              <li><a href="#cupones">Beneficios</a></li>
+              <li class="divider"></li>
+              <li><a href="#register/team/new">Crear un Equipo</a></li>
+              <li><a href="#register/team/join">Unirse a un Equipo</a></li>
+              <li class="divider"></li>
+              <li><a href="#logout">Cerrar sesión</a></li>
+            </ul>
+          </div>
+        </header>
+      </div>
+    </div>
+  </div>
+</div>

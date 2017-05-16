@@ -1,0 +1,156 @@
+.btn {
+  border-radius: $radius;
+  font-size: 13px;
+  cursor: pointer;
+  line-height: 23px;
+
+  &.btn-rounded {
+    border-radius: 100px;
+  }
+
+  &.btn-small {
+    line-height: 19px;
+    font-size: 12px;
+  }
+
+  &.btn-medium {
+    line-height: 38px;
+    font-size: 14px;
+  }
+
+  &.btn-large {
+    line-height: 45px;
+    font-size: 15px;
+
+    &.btn-outline {
+      line-height: 41px;
+    }
+  }
+
+  &.hard-border-btn {
+    border: 0;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.3);
+  }
+
+  &.btn-full {
+    text-align: center;
+  }
+
+  &.btn-hard {
+    border: 0;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
+  }
+
+  &[disabled="disabled"] {
+    opacity: .3;
+    cursor: not-allowed;
+  }
+
+  &.btn-black {
+    border-color: transparent;
+  }
+}
+
+.btn-primary {
+  color: $white-color;
+  background: $primary-color;
+  border: 1px solid darken($primary-color, 8%);
+  border-bottom-color: darken($primary-color, 11%);
+  box-shadow: 0 1px 1px rgba(0,0,0,.08);
+  @include linear-gradient($primary-color, darken($primary-color, 3%));
+
+  &:hover {
+    color: #fff;
+    background: lighten($primary-color, 3%);
+    @include linear-gradient(lighten($primary-color, 3.5%), $primary-color);
+  }
+
+&.delete{
+    float: right;
+    background: transparent url("../img/background/pack.png");
+    background-repeat: no-repeat;
+    background-position: -52px -33px;
+    background-position-x: -52px;
+    background-position-y: -33px;
+     border: 0px; 
+     margin: 0px; 
+     padding: 0px; 
+     outline: none; 
+     font-size: 4px; 
+     text-indent: -9000px; }
+
+&.delete:hover{
+  opacity: .5;
+  cursor: hand;
+}
+
+}
+
+.btn-secondary {
+  color: #666;
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-bottom-color: darken(#dbdbdb, 7%);
+  @include linear-gradient(#fafafa, darken(#fafafa, 1%));
+
+
+  &:hover {
+    color: #666;
+    background: lighten(#fafafa, 3%);
+    @include linear-gradient(lighten(#fafafa, 3.5%), #fafafa);
+  }
+
+  &.hidden{
+    float: left;
+
+@include max-screen(400px) {
+          margin: 5px 0 0 -100px;
+    }
+   }
+
+  input {
+    color: #666;
+  }
+}
+
+.btn-outline {
+  border: 2px solid #dadada;
+  color: $white-color;
+  
+  &.one {
+    border-width: 1px;
+  }
+}
+
+.btn-yellow {
+  background: #c4ab26;
+  color: $white-color;
+
+  &:hover {
+    background: tint(#c4ab26, 10%);
+  }
+}
+
+.btn-blue {
+  background: #2ac497;
+  color: $white-color;
+
+  &:hover {
+    background: tint(#2ac497, 10%);
+  }
+}
+
+.btn-white {
+  background: $white-color;
+  color: $primary-color;
+
+  &:hover {
+    background: $white-color;
+  }
+}
+
+.btn-fb {
+  background: #3b5998;
+  border: 1px solid darken(#3b5998, 10%);
+  color: $white-color; 
+}

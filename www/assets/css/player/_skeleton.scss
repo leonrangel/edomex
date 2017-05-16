@@ -1,0 +1,82 @@
+.player-header {
+  .header-main {
+    height: 385px;
+    position: relative;
+    @include clearfix; 
+  }
+
+  .cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .player-avatar {
+    position: relative;
+    z-index: 5;
+    float: left;
+    margin: 30px;
+    width: 240px;
+    height: 310px;
+
+    span {
+      overflow: hidden;
+      display: block;
+      width: 230px;
+      height: 300px;
+      margin: 5px;
+    }
+  }
+
+  .player-info {
+    margin-top: 30px;
+    float: left;
+    z-index: 5;
+    position: relative;
+
+    .name {
+      @include clearfix;
+
+      h1 {
+        float: left;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .player-attributes {
+
+    li {
+      padding-top: 10px;
+    }
+  }
+}
+
+  .soccer-id{
+    width: 100%;
+    height: 85px;
+    position: absolute; 
+    display: block;
+    background: rgba(255,255,255, 0.6);
+    text-align: center;
+    padding: 30px 0 5px 0;
+    z-index: 1019;
+  }
+
+  .soccer-id p{
+    font-size: 18px;
+    color: #2594e9;
+  }
+  .soccer-id a{
+    color: white;
+  }
+
+  .info-blur{
+     -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  }

@@ -1,0 +1,66 @@
+.match-overview {
+  // @include container-shadow; 
+
+  &-header {
+    background: url('#{$background-path}/match-overview.jpg');
+    border-radius: $radius $radius 0 0;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .25);
+
+    .team {
+
+      h3 {
+        color: $white-color;
+        font-size: 24px;
+      }
+
+      .score {
+        color: $white-color;
+        font-size: 38px;
+      }
+
+      &.tr {
+        text-align: right;
+      }
+    }
+  }
+
+  .match-scores {
+    text-align: center;
+
+    .vs {
+      color: #bac786;
+      font-size: 18px;
+    }
+  }
+
+  &-main {
+    background: $white-color;
+    border-radius: 0 0 $radius $radius;
+
+    .match-team-stats {
+
+      &.tl {
+        border-right: 1px solid $separator-color;
+      }
+
+      &.tr {
+        border-left: 1px solid $separator-color;
+        text-align: right;
+      }
+    }
+  }
+
+  .stats-section {
+    border-top: 1px dashed $separator-color;
+
+    &.alpha {
+      border-top: 0;
+    }
+
+    .match-players {
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+}

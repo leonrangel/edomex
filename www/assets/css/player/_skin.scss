@@ -1,0 +1,49 @@
+.player-header {
+  .header-main {
+    border-radius: $radius;
+    @include cover-background;
+  }
+
+  .cover {
+    background: rgba(0,0,0,.73);
+    border-radius: $radius;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .25);
+  }
+
+  .player-avatar {
+    background: $white-color;
+    border-radius: $radius;
+    @include container-shadow;
+
+    span {
+      border-radius: $radius;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .player-info {
+    .name {
+      color: $white-color;
+      font-size: 28px;
+
+      h1 {
+        font-size: 28px;
+      }
+
+      span {
+        color: #d7d7d7;
+      }
+    }
+  }
+
+  .player-attributes li {
+    color: $white-color;
+
+    span {
+      font-size: 10px;
+      color: #b6b6b6;
+      text-transform: uppercase;
+    }
+  }
+}

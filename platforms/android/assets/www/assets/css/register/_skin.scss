@@ -1,0 +1,113 @@
+.register {
+  .register-header {
+    text-align: center;
+  }
+
+  .title {
+    text-align: center;
+
+    h1 {
+      font-size: 28px;
+      color: $white-color;
+    }
+
+    p {
+      color: #b8b8b8;
+      @include text-size-large;
+    }
+  }
+}
+
+.register-select-user {
+  .register-user-box {
+    border-radius: $radius;
+    border: 1px solid darken($white-color, 75%);
+    background: rgba(255, 255, 255, .01);
+    text-align: center;
+
+    h3 {
+      color: $white-color;
+    }
+
+    p {
+      font-family: $helvetica;
+      color: #a1a1a1;
+      @include text-size-small;
+    }
+  }
+}
+
+// First Login Complete Profile Form
+.first-login-complete-profile {
+  .first-login-profile-form {
+    @include secondary-box-style;
+
+    .footer {
+      text-align: center;
+      @include footer-content;
+    }
+  }
+
+  .upload-avatar-button {
+    cursor: pointer;
+    background: #e8e8e8;
+    border: 5px solid $white-color;
+    border-radius: 50%;
+    background-size: contain;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .08), 0 1px 5px rgba(0, 0, 0, .1);
+    text-align: center;
+
+    span {
+      text-transform: uppercase;
+      font-size: 11px;
+      color: #9b9b9b;
+    }
+
+    &:hover {
+      background: #e3e3e3 !important;
+    }
+    
+    &.filled {
+      i, span {
+        display: none;
+      }
+    }
+  }
+}
+
+// New User Select Options Teams
+.new-user-select-option {
+  .option-box {
+    border: 2px solid $primary-color;
+    border-radius: $radius;
+    background: rgba(161, 188, 49, .05);
+    font-size: 20px;
+    color: $white-color;
+
+    &:hover {
+      background: rgba(161, 188, 49, .1);
+    }
+  }
+
+  .skip-options {
+    text-align: center;
+    font-size: 12px;
+
+    a {
+      color: #979797;
+    }
+  }
+}
+
+.login-mobile {
+  .register-header {
+    text-align: center;
+  }
+}
+
+.socials {
+  color: #fff; 
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 30px;
+}

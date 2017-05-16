@@ -1,0 +1,19 @@
+<li>
+  <span class="lbl">Jugador:</span>
+  <select name="{{name}}" data-validator-required>
+  
+  {{#isNull value }}
+      <option value="null" selected="selected">Otro</option>
+    {{else}}
+      <option value="null">Otro</option>
+    {{/isNull}}
+
+    {{#each players}}
+      {{#ifEquals ../value _id}}
+        <option value="{{_id}}" selected="selected">{{name}} {{lastnameFather}}</option>
+      {{else}}
+        <option value="{{_id}}">{{name}} {{lastnameFather}}</option>
+      {{/ifEquals}}
+    {{/each}}
+  </select>
+</li>

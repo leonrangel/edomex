@@ -1,0 +1,93 @@
+.team-members-list {
+  .team-player {
+    display: block;
+    margin-bottom: 20px;
+
+    .player-info {
+      padding: 5px 15px 10px 15px;
+
+      & h5 {font-size: 12px;
+
+       @include max-screen(930px) {
+         font-size: 10px;
+        }
+         @include max-screen(730px) {
+         font-size: 8px;
+        }
+         @include max-screen(640px) {
+         font-size: 14px;
+        }
+}
+
+    }
+
+    .player-avatar {
+      padding: 5px;
+
+      .image {
+        display: block;
+        height: 0;
+        padding-bottom: 120%;
+      }
+    }
+  }
+}
+
+.upload-avatar {
+    background: transparent url("../img/background/pack.png");
+    background-repeat: no-repeat;
+    background-position: -258px -95px;
+    background-position-x: -258px;
+    background-position-y: -95px;
+    border: 0px;
+    margin: 5px 0 0 0;
+    padding: 0 0 15px 0;
+    outline: none;
+    font-size: 0px;
+    text-indent: -9000px;
+    bottom: 0px;
+}
+
+.upload-avatar:hover{
+  opacity: .5;
+  cursor: hand;
+}
+
+.upload-background {
+    position: absolute;
+    right: 0px;
+    background: transparent url("../img/background/pack.png");
+    background-repeat: no-repeat;
+    background-position: -210px -53px;
+    background-position-x: -210px;
+    background-position-y: -53px;
+    border: 0px;
+    margin: 5px 0 0 0;
+    padding: 0 0 15px 0;
+    outline: none;
+    font-size: 0px;
+    text-indent: -9000px;
+    z-index: 999;
+    width: 50px;
+
+}
+
+.upload-background:hover{
+  opacity: .5;
+  cursor: hand;
+}
+
+ .go-back{
+  position: absolute;
+  top: 0px;
+  z-index: 10000;
+  color: #000;
+  font-size: 40px;
+  display: block;
+  background-color: rgba(255,255,255, 0.7);
+  padding: 5px 15px 5px 15px;
+ }
+
+ #tournamentContent .primary-table td:empty::before {
+  content: 'No se he especificado un reglamento';
+  text-align: center;}

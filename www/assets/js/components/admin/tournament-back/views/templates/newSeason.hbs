@@ -1,0 +1,42 @@
+<div class="modal fade">
+  <div class="modal-dialog register-user-modal">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!-- Content -->
+        <form class="user-form" method="post">
+          <div class="header">
+            <h2>Crear Jornada</h2>
+          </div>
+          <div class="content">
+            <div class="form-section no-border">
+              <div class="main">
+                <input type="checkbox" name="range" /> De varios días
+                <br />
+                <br />
+              </div>
+              <div class="label">
+                <label for="name">Fecha(s): <span class="rqd">*</span></label>
+              </div>
+              <div class="main input-daterange">
+                <input type="text" name="startDate"
+                       placeholder="Fecha"
+                       data-validator-required />
+                <br />
+                <br />
+                <input type="text" name="endDate" 
+                       placeholder="Fecha de Cierre" />
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <input type="submit"
+                   value="Crear Jornada"
+                   class="btn btn-primary btn-medium submit">
+            <div class="clr"></div>
+          </div>
+        </form>
+        <!-- / Content -->
+      </div>
+    </div>
+  </div>
+</div>

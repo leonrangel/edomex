@@ -1,0 +1,63 @@
+<div class="col-inner">
+  <div class="container">
+    <div class="box-container mb">
+      <div class="box-header">
+        <h2>Equipos</h2>
+        <div class="actions">
+          <button class="btn btn-primary create">+ Equipo</button>
+        </div>
+      </div>
+      <div class="box-main">
+        <table class="primary-table">
+          <thead>
+            <tr>
+              <th>Equipo</th>
+              {{#if useGpo}}
+              <th>Grupo</th>
+              {{/if}}
+              <th>Capitán</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+          {{#each participants}}
+            <tr>
+              <td>
+                {{#if team._id}}
+                <a href="#equipo/{{team.url}}">
+                  <span class="img" style="background-image:url('https://www.somosfut.com/team/{{team._id}}/avatar');"></span>
+                  {{team.name}}
+                </a>
+                {{/if}}
+              </td>
+              {{#if ../useGpo}}
+              <td>
+                {{group}}
+              </td>
+              {{/if}}
+              <td>
+                {{#if team._id}}
+                  {{#if team.noName}}
+                    Sin capitán
+                  {{else}}
+                  <a href="#jugador/{{team.admins.0.url}}">
+                    <span class="img" style="background-image:url('https://www.somosfut.com/user/{{team.admins.0._id}}/avatar');"></span>
+                    {{team.admins.0.name}} {{team.admins.0.lastnameFather}}
+                  </a>
+                  {{/if}}
+                {{/if}}
+              </td>
+              <td>
+                {{#if team._id}}
+                <button data-ids="{{team._id}}" class="btn btn-primary edit">Editar</button>
+                
+                {{/if}}
+              </td>
+            </tr>
+          {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

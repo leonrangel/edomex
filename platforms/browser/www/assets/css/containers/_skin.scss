@@ -1,0 +1,22 @@
+.box-container {
+  @include secondary-box-style;  
+
+  /*.box-header {
+    border-bottom: 1px solid $primary-color;
+  }*/
+
+ .box-header {
+ 	background-color: #f9f9f9;
+    border-bottom: 1px solid #e9e9e9;
+
+    & h3{
+    	font-weight: 500;
+    }
+  }
+
+  .box-footer {
+    background: tint($primary-color, 97%);
+    border-radius: 0 0 $radius $radius;
+    border-top: 1px solid #e6e6e1;
+  }
+}

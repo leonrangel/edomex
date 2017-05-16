@@ -1,0 +1,80 @@
+.modal-open {
+  overflow: hidden;
+}
+
+// Container that the modal scrolls within
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1020;
+  outline: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+// Shell div to position the modal with bottom padding
+.modal-dialog {
+  position: relative;
+  width: 400px;
+  margin: 40px auto;
+}
+
+// Actual modal
+.modal-content {
+  position: relative;
+  background-clip: padding-box;
+  outline: 0;
+}
+
+// Modal background
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+// Modal body
+.modal-body {
+  position: relative;
+}
+
+// Specific measures for certain modals
+.register-user-modal {
+  width: 400px;
+
+ @include max-screen(550px) {
+   width: 300px;
+    }
+
+}
+
+.vimeo-modal{
+  width: 540px;
+  display: block;
+
+  @include max-screen(550px) {
+   width: 350px;
+    }
+
+     @include max-screen(370px) {
+   width: 300px;
+    }
+}
+
+
+.login-user-modal {
+  width: 380px;
+  @include max-screen(550px) {
+   width: 300px;
+    }
+}

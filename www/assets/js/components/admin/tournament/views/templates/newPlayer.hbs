@@ -1,0 +1,145 @@
+<div class="modal fade">
+  <div class="modal-dialog register-user-modal">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!-- Content -->
+        <form class="user-form" method="post">
+          <div class="header">
+            <h2>Agregar Jugador</h2>
+          </div>
+          <div class="content">
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">Nombre: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="name"
+                       placeholder="Nombre"
+                       data-validator-required>
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">Apellido Paterno: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="lastnameFather"
+                       placeholder="Apellido Paterno"
+                       data-validator-required>
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">Apellido Materno: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="lastnameMother"
+                       placeholder="Apellido Materno"
+                       data-validator-required>
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">Correo Electrónico: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="email"
+                       placeholder="Correo Electrónico"
+                       data-validator-required>
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">Teléfono: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="mobile"
+                       placeholder="Teléfono"
+                       data-validator-required>
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">Edad: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="age"
+                       placeholder="Edad"
+                       data-validator-required>
+              </div>
+            </div>
+    
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">Dirección: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="address"
+                       placeholder="Dirección"
+                       data-validator-required>
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label>Equipo: </label>
+              </div>
+              <div class="main">
+                <select id="selteam" data-validator-required style="width: 100%;">
+                  <option disabled="disabled">Buscando...</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">Número: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="number"
+                       placeholder="Número"
+                       data-validator-required>
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">Posición: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text"  list="listPositions" 
+                       name="position"
+                       placeholder="Posición"
+                       data-validator-required>
+                <datalist id="listPositions">
+                  <option value="Portero">
+                  <option value="Defensa">
+                  <option value="Medio">
+                  <option value="Delantero">
+                </datalist>
+              </div>
+            </div>
+
+          </div>
+          <div class="footer">
+            <input type="submit"
+                   name="submit-player"
+                   value="Crear Jugador"
+                   class="btn btn-primary btn-medium submit">
+            <div class="clr"></div>
+          </div>
+        </form>
+        <!-- / Content -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+            

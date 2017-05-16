@@ -1,0 +1,191 @@
+.match {
+
+  > a {
+    display: block;
+    padding: 15px 0;
+  }
+
+  &.expanded  {
+    padding: 30px;
+    border-bottom: 1px solid rgba(232, 232, 232, .8);
+  }
+
+  &.no-link {
+    padding: 30px 0;
+  }
+
+  .teams {
+    position: relative;
+    @include clearfix;
+  }
+
+  .vs {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    width: 22px;
+    height: 22px;
+    margin: -15px 0 0 -11px;
+  }
+
+  .team {
+    width: 50%;
+    float: left;
+
+    .team-inner {
+      padding: 0 10px;
+    }
+
+    span.img {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-size: cover;
+      margin-bottom: 5px;
+    }
+  }
+
+  .goals-input {
+    position: absolute;
+    width: 70px;
+    top: 50%;
+    margin-top: -20px;
+
+    &.right-team {
+      left: 20px;
+    }
+
+    &.left-team {
+      right: 20px;
+    }
+  }
+
+  .goals {
+    position: absolute;
+    top: 50%;
+    margin-top: -13px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #a1bc31;
+
+    &.last {
+      left: 18px;
+    }
+
+    &.first {
+      right: 18px;
+    }
+  }
+
+  .info {
+    margin-top: 15px;
+    margin-bottom: 20px;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.edit{
+  text-align: center;
+  margin: auto;
+}
+
+.match-statistics {
+  @include clearfix;
+
+  .team {
+    float: left;
+    width: 50%;
+
+    &:first-child .inner {
+      margin-right: -1px;
+    }
+  }
+
+  .team-extract {
+    padding: 10px 0;
+    @include clearfix;
+
+    span.img {
+      display: block;
+      width: 60px;
+      height: 60px;
+      background-size: cover;
+      float: left;
+    }
+
+    .team-details {
+      margin: 9px 0 0 75px;
+    }
+
+    .goals {
+      width: 75px;
+    }
+  }
+
+  .section {
+    padding: 15px 10px;
+
+    .head {
+      @include clearfix;
+    }
+
+    h6 {
+      float: left;
+    }
+
+    .actions {
+      margin-top: -1px;
+      float: right;
+
+      label {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .players {
+    margin-top: 10px;
+
+    li {
+      margin-bottom: 8px;
+      position: relative;
+      padding: 6px 0;
+      border-bottom: 1px solid #EEE;
+      @include clearfix;
+      
+      span.lbl {
+        font-size: 11px;
+      }
+      
+      select {
+        font-size: 11px;
+        padding: 5px;
+        background-image: none;
+        max-width: 40px;
+      }
+    }
+
+    img {
+      display: block;
+      float: left;
+      margin-right: 5px;
+    }
+
+    .delete {
+      position: absolute;
+      left: 0;
+      top: -1px;
+      padding: 3px 3px 3px 0;
+    }
+
+    .goals {
+      position: absolute;
+      right: 0;
+      top: 1px;
+      width: 45px;
+    }
+  }
+}

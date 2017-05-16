@@ -1,0 +1,123 @@
+#{$all-text-inputs}, textarea {
+  padding: 11px 7px 11px 7px;
+  width: 100%;
+
+
+  @include placeholder {
+    color: #999;
+  }
+
+  &.small {
+    padding: 3px;
+  }
+}
+
+textarea {
+  padding: 5px 7px;
+}
+
+.form-section {
+  padding: 15px 10px;
+
+  &.no-border {
+    padding: 10px;
+  }
+
+  &.checkable {
+    .label {
+      padding-left: 20px;
+      position: relative;
+
+      input {
+        position: absolute;
+        left: 0;
+        top: 3px;
+      }
+    }
+
+    .main {
+      padding-left: 20px;
+    }
+  }
+
+  .label {
+    p + p {
+      margin-top: 3px;
+    }
+  }
+
+  .main {
+    margin-top: 10px;
+  }
+
+  .subsection {
+    padding: 5px 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  .errors {
+    margin-top: 10px;
+
+    p + p {
+      margin-top: 5px;
+    }
+  }
+}
+
+.tagged-input {
+  position: relative;
+
+  .tag {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    padding: 11px 10px;
+  }
+
+  &.league-url input {
+    padding-left: 220px;
+  }
+}
+
+.action-input {
+  position: relative;
+
+  .action {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    display: block;
+  }
+}
+
+.map-edit {
+  overflow: hidden;
+  height: 250px;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+select {
+  padding: 11px 25px 11px 10px;
+}
+
+select.calendar-weeks {
+  padding: 4px 25px 4px 10px;
+}
+
+@include max-screen(600px) {
+  
+  .tooltip{
+  margin-left: -50px!important;
+}
+    }

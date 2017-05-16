@@ -1,0 +1,55 @@
+<div class="modal fade">
+  <div class="modal-dialog register-user-modal">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!-- Content -->
+        <form class="user-form" method="post">
+          <div class="header">
+         <center>   <h2>Invitar Jugadores</h2> </center>
+          </div>
+          <div class="content">
+            <div class="form-section no-border">
+              <center><p>Éste es el código de tu equipo, <b> compártelo por Facebook o Whatsapp </b> con tus compañeros:  </p></center></br>
+              <h1 id="invite-team-token" class="txt-c">{{token}}</h1>
+              <br>
+              <a href=""
+                class="copy-token"
+                data-clipboard-target="#invite-team-token">
+                <center>Copiar código al portapapeles</center>
+              </a>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="email"> 
+      
+                <HR width=85% align="center">
+                </br>
+               <center> O puedes enviarlo al mail del jugador: </center></label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="email"
+                       placeholder="Ejemplo: invite@me.com"
+                       data-validator-required
+                       data-validator-email>
+              </div>
+            </div>
+            <center> <input type="submit"
+                   value="Enviar por Mail"
+                   class="btn btn-primary btn-medium submit"></center>
+                    <br>
+          </div>
+          <div class="footer">
+           
+            <div class="clr"></div>
+           
+           <center> 
+            <a href="" class="dont-show">Dejar de mostrar este mensaje</a> </br>
+          </center>
+          </div>
+        </form>
+        <!-- / Content -->
+      </div>
+    </div>
+  </div>
+</div>

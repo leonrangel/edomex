@@ -1,0 +1,25 @@
+.user-sidebar {
+  .user-sidebar-section {
+    margin-top: 20px;
+
+    &:first-child {
+      margin: 0;
+    }
+  }  
+
+  .user-name {
+    display: block;    
+    padding: 10px 10px 0 10px;
+  }
+
+  .list-box {
+    .title {
+      padding: 3px 10px;     
+    }
+
+    ul li a {
+      display: block;
+      padding: 13px 10px;
+    }
+  }
+}

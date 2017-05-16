@@ -1,0 +1,29 @@
+.btn {
+  @include inline-block;
+  padding: 0 10px;
+  height: 25px;
+  
+  &.btn-small {
+    height: 20px;
+    padding: 0 5px;
+  }
+
+  &.btn-medium {
+    height: 38px;
+    padding: 0 20px;
+  }
+
+  &.btn-large {
+    height: 45px;
+    padding: 0 20px;
+
+    &.btn-outline {
+      height: 41px;
+    }
+  }
+
+  &.btn-full {
+    display: block;
+    width: 100%;
+  }
+}

@@ -1,0 +1,140 @@
+<div class="modal fade">
+  <div class="modal-dialog register-user-modal">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!-- Content -->
+        <form class="user-form" method="post">
+          <div class="header">
+          {{#if edit }}
+            <h2>Editar Partido</h2>
+          {{else}}
+            <h2>Crear Partido</h2>
+          {{/if}}
+          </div>
+          <div class="content">
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="name">Jornada: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <select name="season"
+                        data-validator-required>
+                  <option selected="selected" disabled="disabled">-</option>
+                  {{#each seasons}}
+                  {{#if this.endDate}}
+                  <option value="{{this.startDate}};{{this.endDate}}">Jornada {{math @index "+" 1}} : {{formatDate 'MMM DD,  YYYY'this.startDate}} - {{formatDate 'MMM DD,  YYYY'this.endDate}}</option>
+                  {{else}}
+                  <option value="{{this.startDate}}">Jornada {{math @index "+" 1}} : {{formatDate 'MMM DD,  YYYY'this.startDate}}</option>
+                  {{/if}}
+                  {{/each}}
+                </select>
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="name">Equipos: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <select name="teamA"
+                        data-validator-required
+                        style="width:40%;">
+                  <option selected="selected" disabled="disabled">-</option>
+                  {{#each teams}}
+                  <option value="{{team._id}}">{{team.name}}{{#if group}} ({{group}}){{/if}}</option>
+                  {{/each}}
+                </select>
+                - VS -
+                <select name="teamB"
+                        data-validator-required
+                        style="width:40%;">
+                  <option selected="selected" disabled="disabled">-</option>
+                  {{#each teams}}
+                  <option value="{{team._id}}">{{team.name}}{{#if group}} ({{group}}){{/if}}</option>
+                  {{/each}}
+                </select>
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="name">Fecha: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text"
+                       name="date"
+                       class="datepicker"
+                       placeholder="Fecha"
+                       data-validator-required>
+              </div>
+            </div>
+
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="">Lugar: </label>
+              </div>
+              <div class="main">
+                <input type="text"
+                       name="address"
+                       placeholder="Lugar">
+              </div>
+            </div>
+
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="name">Horario: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <select name="hour"
+                        data-validator-required>
+                  <option selected="selected" value="7">07</option>
+                  <option value="8">08</option>
+                  <option value="9">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                </select>
+                :
+                <select name="minute"
+                        data-validator-required>
+                  <option selected="selected" value="0">00</option>
+                  <option value="5">05</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                  <option value="25">25</option>
+                  <option value="30">30</option>
+                  <option value="35">35</option>
+                  <option value="40">40</option>
+                  <option value="45">45</option>
+                  <option value="50">50</option>
+                  <option value="55">55</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <input type="submit"
+            {{#if edit}}
+                   value="Actualizar Partido"
+            {{else}}
+                   value="Crear Partido"
+            {{/if}}
+                   class="btn btn-primary btn-medium submit">
+            <div class="clr"></div>
+          </div>
+        </form>
+        <!-- / Content -->
+      </div>
+    </div>
+  </div>
+</div>

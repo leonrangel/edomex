@@ -1,0 +1,63 @@
+// Grid
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+  @include clearfix;
+
+  @include max-screen(960px) {
+    width: 95%;
+  }
+}
+
+div[class^="cols-1"] {
+  @include clearfix;
+
+  .col {
+    float: left;
+    min-height: 1px;
+
+    .col-inner {
+      padding: 0 10px 0 10px;
+      position: relative;
+      @include clearfix;
+
+      @include max-screen(640px) {
+        padding: 0;
+      }
+    }
+
+    &.alpha .col-inner {
+      padding-left: 0;
+    }
+
+    &.omega .col-inner {
+      padding-right: 0;
+    }
+
+    &.centered {
+      float: none;
+      margin: 0 auto;
+    }
+
+    @include max-screen(640px) {
+      width: 100%;
+      clear: both;
+    }
+  }
+}
+
+.cols-16 {
+  @for $i from 1 through 16 {
+    .col-#{$i} {
+      width: 100% / 16% * $i * 1%;
+    }
+  }
+}
+
+.cols-12 {
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      width: 100% / 12% * $i * 1%;
+    }
+  }
+}

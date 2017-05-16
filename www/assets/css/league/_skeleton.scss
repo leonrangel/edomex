@@ -1,0 +1,269 @@
+.league-admin-header {
+  margin-bottom: 20px;
+  @include clearfix;
+
+  .brand {
+    float: left;
+    margin: 7px 10px 8px 10px;
+
+    a {
+      display: block;
+      @include clearfix;
+    }
+  }
+
+  .site-navigation {
+    float: left;
+    margin-left: 5px;
+    margin-top: 21px;
+
+    ul li {
+      padding: 0px 8px;
+      float: left;
+    }
+  }
+
+  .avatar {
+    overflow: hidden;
+    display: block;
+    width: 45px;
+    height: 45px;
+    float: left;
+
+    img {
+      display: block;
+      margin-right: 10px;
+    }
+  }
+
+  .name {
+    display: block;
+    float: left;
+    margin-left: 10px;
+  }
+}
+
+.league-tournaments {
+  @include secondary-box-style;
+
+  .head {
+    padding: 20px 0 15px 0;
+    
+    .i {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .tournaments {
+   overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+     -webkit-overflow-scrolling: touch;
+    @include clearfix;
+
+    .control {
+      display: block;
+      position: absolute;
+      top: 50%;
+      margin-top: -30px;
+      width: 13px;
+      height: 31px;
+
+      &.prev {
+        left: 10px;
+      }
+
+      &.next {
+        right: 10px;
+      }
+    }
+
+    .list-wrapper {
+      margin: 0px 40px;
+    overflow-y: hidden;
+    }
+
+     @include max-screen(600px) {
+       
+    .list-wrapper {
+      margin: 0px 20px!important;
+    overflow-y: hidden;
+    }
+}
+
+    ul {
+      width: 150%;
+      overflow-y: hidden;
+      @include clearfix; 
+
+           @include max-screen(900px) {
+         width: 200%; 
+}
+
+       @include max-screen(750px) {
+         width: 320%; 
+}
+        @include max-screen(650px) {
+         width: 450%; 
+}
+        @include max-screen(400px) {
+         width: 500%; 
+}
+
+       @include max-screen(350px) {
+         width: 800%; 
+}
+
+
+      li {
+        float: left;
+        display: inline-block; 
+      }
+
+      a {
+        padding: 0px 15px 20px 15px;
+        display: block;
+        width: 90px;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto 10px auto;
+      }
+    }
+      ul:after {
+    @include max-screen(650px) {
+    content: '';
+    display: inline-block; 
+    width: 100%; 
+}
+    }
+  }
+}
+
+.league-map {
+  height: 300px;
+  overflow: hidden;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+// League Admin
+.tournamets-cards-list {
+  .tournament-card {
+    height: 230px;
+    width: 100%;
+    display: table;
+    margin-bottom: 20px;
+
+    .info {
+      display: table-cell;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.league-a-tournamet-extract {
+  padding: 10px;
+
+  img {
+    margin-right: 5px;
+  }
+
+  .title {
+    display: inline;
+  }
+}
+
+// Calendar Controls
+.date-controls {
+  position: relative;
+  padding: 15px 0;
+
+  .control {
+    position: absolute;
+
+    &.left {
+      left: 10px;
+    }
+
+    &.right {
+      right: 10px;
+    }
+  }
+}
+
+.facilities-photos {
+  padding: 5px;
+  @include clearfix;
+
+  > ul > li {
+    float: left;
+    width: (100% / 2);
+  }
+
+  span {
+    display: block;
+    margin: 5px;
+    position: relative;
+    height: 170px;
+
+    > a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .upload-inline-photo {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      .i {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -25px;
+        margin-top: -17px;
+      }
+    }
+  }
+}
+
+#leagueMatchesList .matches-list:empty:before {
+   content: 'No hay partidos actualmente';
+   color : black;
+   /* los demas estilos de como se debe mirar el mensaje */
+}
+
+#leagueFinalsList .matches-list:empty:before {
+   content: 'No se ha creado ninguna Liguilla';
+   text-align: center;
+   padding-top: 45px;
+   font-size: 20px;
+   font-weight: lighter;
+   color: black;
+   display: block;
+   height: 100px;
+}
+
+#FriendlyMatchList .matches-list:empty:before {
+   content: 'No se ha creado ningún Amistoso';
+   text-align: center;
+   padding-top: 45px;
+   font-size: 20px;
+   font-weight: lighter;
+   color: black;
+   display: block;
+   height: 100px;
+}

@@ -1,0 +1,38 @@
+<li>
+  <span class="lbl">Anotó:</span>
+  <select name="goals{{team}}[]" data-validator-required>
+ 
+
+    {{#isNull value }}
+      <option value="null" selected="selected">Otro</option>
+    {{else}}
+      <option value="null">Otro</option>
+    {{/isNull}}
+
+    {{#each players}}
+      {{#ifEquals ../value _id}}
+        <option value="{{_id}}" selected="selected">{{name}} {{lastnameFather}}</option>
+      {{else}}
+        <option value="{{_id}}">{{name}} {{lastnameFather}}</option>
+      {{/ifEquals}}
+    {{/each}}
+  </select>
+  <span class="lbl">Pase:</span>
+  <select name="assists{{team}}[]" data-validator-required>
+ 
+
+    {{#isNull assistedBy }}
+      <option value="null" selected="selected">Otro</option>
+    {{else}}
+      <option value="null">Otro</option>
+    {{/isNull}}
+
+    {{#each players}}
+      {{#ifEquals ../assistedBy _id}}
+        <option value="{{_id}}" selected="selected">{{name}} {{lastnameFather}}</option>
+      {{else}}
+        <option value="{{_id}}">{{name}} {{lastnameFather}}</option>
+      {{/ifEquals}}
+    {{/each}}
+  </select>
+</li>

@@ -1,0 +1,422 @@
+//  ____                                         ____           __      
+// /\  _`\                                      /\  _`\        /\ \__   
+// \ \,\L\_\    ___     ___ ___     ___     ____\ \ \L\_\__  __\ \ ,_\  
+//  \/_\__ \   / __`\ /' __` __`\  / __`\  /',__\\ \  _\/\ \/\ \\ \ \/  
+//    /\ \L\ \/\ \L\ \/\ \/\ \/\ \/\ \L\ \/\__, `\\ \ \/\ \ \_\ \\ \ \_ 
+//    \ `\____\ \____/\ \_\ \_\ \_\ \____/\/\____/ \ \_\ \ \____/ \ \__\
+//     \/_____/\/___/  \/_/\/_/\/_/\/___/  \/___/   \/_/  \/___/   \/__/ 2014
+
+// Dependencies
+@import 'bourbon/bourbon';
+@import 'commons/reset';
+@import 'commons/normalize';
+
+// Fonts
+@import 'fonts/montserrat';
+
+// Commons
+@import 'commons/base';
+@import 'commons/mixins';
+@import 'commons/helpers';
+@import 'commons/media_queries';
+@import 'commons/grid_system';
+@import 'commons/animations';
+@import 'coupons/coupons';
+
+// Globals
+@import 'global/skeleton';
+@import 'global/skin';
+@import 'global/icons';
+
+// Forms
+@import "forms/skeleton";
+@import "forms/skin";
+
+// User
+@import "user/skeleton";
+@import "user/skin";
+
+// Post
+@import "post/skeleton";
+@import "post/skin";
+
+// Buttons
+@import "buttons/skeleton";
+@import "buttons/skin";
+
+// Containers
+@import "containers/skeleton";
+@import "containers/skin";
+
+// Matches
+@import "matches/skeleton";
+@import "matches/skin";
+
+// Landing Page
+@import "landing/skeleton";
+@import "landing/skin";
+
+// League
+@import "league/skeleton";
+@import "league/skin";
+
+// Tables
+@import "tables/skeleton";
+@import "tables/skin";
+
+// Gallery
+@import "gallery/skeleton";
+@import "gallery/skin";
+
+// Register
+@import "register/skeleton";
+@import "register/skin";
+
+// Modal
+@import "modal/skeleton";
+@import "modal/skin";
+@import "modal/coupons-modal";
+
+// Tooltips
+@import "tooltips/skeleton";
+@import "tooltips/skin";
+
+// Alerts
+@import "alerts/skin";
+
+// Dropdowns
+@import "dropdown/skeleton";
+
+// Datepicker
+@import "datepicker/skin";
+
+// Team
+@import "team/skeleton";
+@import "team/skin";
+
+// Player
+@import "player/skeleton";
+@import "player/skin";
+
+// Match
+@import "match/skeleton";
+@import "match/skin";
+
+body.mobile {
+    width: 100%;
+    height: 100%; 
+    background: #000;
+    background-image: url(../img/background/body-mobile.jpg);
+   background-repeat: no-repeat;
+   background-position: bottom;
+   background-size: 100% auto;
+
+
+  .mobile-login {
+    padding-top: 50px;
+    padding-bottom: 0px;
+    width: 200px !important;
+    margin: auto !important;
+    background-position: bottom;
+  }
+
+  .admins-login{
+    margin-top: 20px;
+  }
+
+  .form-section{
+    width: 85%;
+    margin: auto;
+  }
+  .submit-login{
+    margin-top: -20px;
+  }
+
+  .admins-login{
+    color: #fff;
+    font-size: 15px;
+  }
+
+  .btn-login {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .links-login a {
+    color: #fff;
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .input-login {
+    padding-left: 40px;
+    background-color: #fff;
+/*    border: 1px solid #ccc;*/
+    border-radius: 3px;
+/*    box-shadow: inset 0 1px 0 */
+  }
+
+  .players-login{
+    color: #fff;
+    font-size: 14px;
+  }
+
+  .contact-league{
+    color: #fff;
+    font-size: 14px;
+
+    animation-name: parpadeo;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:parpadeo;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  }
+
+@-moz-keyframes parpadeo{  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes parpadeo {  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+   100% { opacity: 1.0; }
+}
+
+@keyframes parpadeo {  
+  0% { opacity: 1.0; }
+   50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+
+  hr{
+    width: 50%;
+    border: 1px solid#373737;
+    color: #373737;
+  }
+
+  .contact-us{
+    width: 100%;
+    height: 20px;
+    position: fixed; 
+    top: 0;
+    display: block;
+    /*background: #2594e9;*/
+    background: #000;
+    text-align: center;
+    padding: 5px 0 5px 0;
+    opacity: 0.9;
+
+  }
+
+  .contact-us a{
+    color: white;
+  }
+
+   .browser-league{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+   }
+
+   
+   .btn-login{border-radius: 3px;}
+
+  .pre-reg{
+    width: 100%; 
+    height: 100px;
+    display: block;
+    background-image: url(../img/background/soccerid.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    margin-top: 220px; 
+          }
+
+  @media (min-height: 600px) {
+ .pre-reg{
+    margin-top: 300px; 
+          }
+}
+
+ @media (min-height: 700px) {
+ .pre-reg{
+    margin-top: 350px; 
+          }
+}
+
+
+
+.main-form{
+      display: block;
+    position: relative;
+  }
+
+.i-email {
+    width: 22px;
+    height: 22px;
+    background-position: 0 -238px;
+     background: url(../img/icons/mail.png) no-repeat;
+    vertical-align: middle;
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    opacity: 0.3;
+}
+
+.i-password {
+    width: 22px;
+    height: 22px;
+    background-position: 0 -238px;
+     background: url(../img/icons/pass.png) no-repeat;
+    vertical-align: middle;
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    opacity: 0.3;
+}
+
+.search-icon{
+    display: block;
+    position: relative;
+  }
+
+.i-search {
+    width: 22px;
+    height: 22px;
+    background-position: 0 -238px;
+     background: url(../img/icons/search.png) no-repeat;
+    vertical-align: middle;
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    position: absolute;
+    left: 10%;
+    top: 10px; 
+    opacity: 0.8;
+}
+
+ .biginput{
+  padding-left: 40px !important;
+ }
+
+ .tabs{
+  width: 100%;
+  display: block;
+  height: 50px;
+  margin-top: 30px;
+ }
+
+ .player-tab-active{
+  width: 50%;
+  float: left;
+  text-align: center;
+  padding: 15px 0 15px 0;
+  background-color: transparent;
+  color: white;
+  vertical-align: middle;
+ }
+
+ .admin-tab-inactive{
+   width: 50%;
+  float: left;
+  text-align: center;
+  padding: 15px 0 15px 0;
+  background-color: rgba(255,255,255, 0.1);
+ }
+
+.tabs a{
+  color: rgba(255,255,255, 0.3);
+}
+
+.admin-tab-active{
+  width: 50%;
+  float: left;
+  text-align: center;
+  padding: 15px 0 15px 0;
+  background-color: transparent;
+  color: white;
+ }
+
+ .player-tab-inactive{
+   width: 50%;
+  float: left;
+  text-align: center;
+  padding: 15px 0 15px 0;
+  background-color: rgba(255,255,255, 0.1);
+ }
+
+ .i-players-tab {
+    width: 30px;
+    height: 20px;
+    background-position: 0 -238px;
+    background: url(../img/icons/players.png) no-repeat;
+    vertical-align: middle;
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    position: absolute;
+    left: 10%;
+    top: 42px; 
+}
+
+ .i-admins-tab {
+    width: 22px;
+    height: 22px;
+    background-position: 0 -238px;
+    background: url(../img/icons/admins.png) no-repeat;
+    vertical-align: middle;
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    opacity: 0.3;
+    position: absolute;
+    left: 60%;
+    top: 42px; 
+}
+
+
+
+.links-social{
+  width: 70px;
+  margin: auto;
+  text-align: center;
+  opacity: 0.6;
+}
+
+
+.i-fb{
+    width: 22px;
+    height:22px;
+    background-position: center center;
+    background: url(../img/icons/fb.png) no-repeat;
+    background-size: 22px auto;
+    display: block;
+    float: left;
+    margin-top: 50px;
+
+}
+
+.i-tw{
+    width: 22px;
+    height:22px;
+    background-position: center center;
+    background: url(../img/icons/tw.png) no-repeat;
+    background-size: 22px auto;
+    display: block;
+    float: right;
+    margin-top: 50px;
+}
+}

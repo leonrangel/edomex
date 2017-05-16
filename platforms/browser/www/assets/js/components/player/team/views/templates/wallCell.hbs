@@ -1,0 +1,17 @@
+<div class="post-header">
+  <div class="author-avatar">
+    <span style="background-image: url( 'https://www.somosfut.com/user/{{post.author._id}}/avatar' );">
+  </div>
+  <div class="author-name">
+    <h6>
+      <a href="#jugador/{{post.author.url}}">{{post.author.name}} {{post.author.lastnameFather}}</a>
+      {{#if deletable}}
+      <button class="btn btn-primary delete">Eliminar Entrada</button>
+      {{/if}}
+    </h6>
+    <span class="date">{{relativeDate post.date}}</span>
+  </div>
+</div>
+<div class="post-main">
+  <pre>{{post.content}}</pre>
+</div>

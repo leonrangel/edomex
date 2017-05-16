@@ -1,0 +1,53 @@
+.new-post {
+  margin-bottom: 20px;
+
+  .main textarea {
+    display: block;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .footer {
+    padding: 10px;
+    @include clearfix;
+
+    .actions {
+      float: right;
+    }
+  } 
+}
+
+.posts-list {
+  .loading {
+    padding: 15px 10px;
+  }
+}
+
+.post {
+  .post-header {
+    padding: 10px;
+    @include clearfix;
+  }
+
+  .author-avatar {
+    float: left;
+    
+    span {
+      display: block;
+      width: 50px;
+      height: 50px;
+      border-radius: 6px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .author-name {
+    margin: 5px 0 0 55px;
+  }
+
+  .post-main {
+    padding: 0px 10px 15px 10px;
+  }
+}

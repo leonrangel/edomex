@@ -1,0 +1,21 @@
+.team-members-list {
+  .team-player {
+    @include secondary-box-style;
+
+    .player-avatar .image {
+      border-radius: $radius;
+      @include cover-background;
+      @extend .image-inner-shadow;  
+    }
+
+    .player-info {
+      text-align: center;
+
+      span {
+        text-transform: uppercase;
+        font-size: 11px;
+        color: $gray-color;
+      }
+    }
+  }
+}

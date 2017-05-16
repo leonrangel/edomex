@@ -1,0 +1,72 @@
+<div class="modal fade">
+  <div class="modal-dialog register-user-modal">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!-- Content -->
+        <form class="user-form" method="post">
+          <div class="header">
+            <h2>Agregar Equipo</h2>
+          </div>
+          <div class="content">
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="email">Nombre del Equipo: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="name"
+                       placeholder="Nombre del Equipo"
+                       data-validator-required>
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="" 
+                  class="hasTip"
+                  title="En esta dirección podras consultar tu perfil público de equipo somosfut.com/#equipo/ACCESO">Acceso de Perfil: <span class="rqd">*</span>
+                </label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="url"
+                       placeholder="Ejemplo: somosfut-fc"
+                       data-validator-required
+                       data-validator-string>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <input type="submit"
+                   name="submit-team"
+                   value="Crear Equipo"
+                   class="btn btn-primary btn-medium submit">
+            <div class="clr"></div>
+          </div>
+        </form><hr>
+        <div class="user-form">
+          <div class="content">
+            <div class="form-section no-border">
+              <div class="label">
+                <label>Agregar existente en otro torneo de esta Liga: </label>
+              </div>
+              <div class="main">
+                <select id="selteam" data-validator-required="" data-validator-error="" style="width: 100%;"">
+                  <option disabled="disabled">Buscando...</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <button id="selteambot" class="btn btn-primary btn-medium" disabled>Agregar Equipo Existente</button>
+            <div class="clr"></div>
+          </div>
+        </div>
+        <!-- / Content -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+            

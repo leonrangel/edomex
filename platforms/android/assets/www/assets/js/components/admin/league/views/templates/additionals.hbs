@@ -1,0 +1,45 @@
+<div class="col-inner" section="extras">
+  <div class="container">
+    <div class="box-container mb">
+      <div class="box-header">
+        <h2>Datos Adicionales</h2>
+      </div>
+      <form action="#" method="post" enctype="multipart/form-data">
+        <div class="box-main">
+          <div class="form-section">
+            <div class="label">
+              <label for="">Croquis de ubicación: </label>
+            </div>
+            <div class="main">
+              {{#each extras.croquis}}
+              <div class="display-croquis" style="background-image: url('{{this}}');"></div>
+              {{/each}}
+              <input type="file" name="croquis" accept="image/*">
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="label">
+              <label for="">Detalles Adicionales Sobre la Liga: </label>
+            </div>
+            <div class="box-main">
+              <div class="form-section alpha">
+                <div class="cols-16">
+                  <div class="col col-16 alpha omega">
+                    <div class="col-inner">
+                      <textarea rows="20"
+                                name="details"
+                                placeholder="Escribe tu información aquí..."></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-footer">
+          <span class="btn btn-primary save">Guardar Cambios</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

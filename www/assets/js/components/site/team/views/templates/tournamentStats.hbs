@@ -1,0 +1,37 @@
+<table class="primary-table">
+ <thead>
+      <tr>
+        <th>Pos</th>
+        <th>Equipo</th>
+        <th>JJ</th>
+        <th>JG</th>
+        <th>JE</th>
+        <th>JP</th>
+        <th>GF</th>
+        <th>GC</th>
+        <th>DG</th>
+        <th>PTS</th>
+      </tr>
+    </thead>
+  <tbody>
+    {{#each table}}
+    <tr>
+     <td><b>{{math @index '+' 1}}</b></td>
+      <td>
+        <a href="#equipo/{{team.url}}">
+          <span class="img" style="background-image:url('https://www.somosfut.com/team/{{team._id}}/avatar')"></span>
+          {{team.name}}
+        </a>
+      </td>
+        <td>{{matches}}</td>
+        <td>{{wins}}</td>
+        <td>{{ties}}</td>
+        <td>{{loses}}</td>
+        <td>{{goalsScored}}</td>
+        <td>{{goalsReceived}}</td>
+        <td>{{math goalsScored '-' goalsReceived}}</td>
+        <td><b>{{points}}</b></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

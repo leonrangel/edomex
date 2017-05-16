@@ -1,0 +1,30 @@
+<div class="match expanded">
+  <div class="teams">
+    <span class="vs">vs</span>
+    <div class="team">
+      <div class="team-inner">
+        {{#if results.filled}}
+        <span class="goals first">{{results.goalsB.length}}</span>
+        {{/if}}
+        <a href="#equipo/{{teamA.url}}">
+          <span class="img" style="background-image: url( 'https://www.somosfut.com/team/{{teamA._id}}/avatar' );"></span>
+          <h4 class="name">{{teamA.name}}</h4>
+        </a>
+      </div>
+    </div>
+    <div class="team">
+     {{#if results.filled}}
+        <span class="goals last">{{results.goalsA.length}}</span>
+        {{/if}}
+      <div class="team-inner">
+        <a href="#equipo/{{teamB.url}}">
+          <span class="img" style="background-image: url( 'https://www.somosfut.com/team/{{teamB._id}}/avatar' );"></span>
+          <h4 class="name">{{teamB.name}}</h4>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="info">
+    <p>Fecha: {{formatDate 'dddd, MMMM Do YYYY - hh:mm' date}}</p>
+  </div>
+</div>

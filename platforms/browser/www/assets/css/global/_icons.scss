@@ -1,0 +1,49 @@
+.i {
+  background-image: url('#{$background-path}/pack.png');
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+
+  
+  &.play-white { width: 10px; height: 16px; background-position: 0 -33px; }
+  &.somos-ball { width: 47px; height: 47px; background-position: 0 -50px; }
+  &.check-green { width: 15px; height: 12px; background-position: -12px -35px; }
+  &.shirt-player { width: 45px; height: 35px; background-position: -49px -54px; }
+  &.teams { width: 45px; height: 35px; background-position: -105px -54px; }
+  &.leagues { width: 45px; height: 35px; background-position: -153px -54px; }
+  &.cup { width: 21px; height: 19px; background-position: -113px 0; }
+  &.black-ball { width: 21px; height: 21px; background-position: -136px 0; }
+  &.black-news { width: 21px; height: 21px; background-position: -158px 0; }
+  &.red-card { width: 21px; height: 21px; background-position: -185px -25px; }
+  &.yellow-card { width: 21px; height: 21px; background-position: -161px -25px; }
+  &.pos-up { width: 7px; height: 6px; background-position: -30px -37px; }
+  &.pos-down { width: 7px; height: 6px; background-position: -40px -37px; }
+  &.green-ball { width: 21px; height: 21px; background-position: -114px -26px; }
+  &.red-close { width: 16px; height: 16px; background-position: -52px -34px; }
+  &.arrow-left-green { width: 8px; height: 12px; background-position: -70px -34px; }
+  &.arrow-right-green { width: 8px; height: 12px; background-position: -80px -34px; }
+  &.pencil-green { width: 12px; height: 12px; background-position: -91px -34px; }
+  &.trash-green { width: 12px; height: 12px; background-position: -31px -115px; }
+  &.trash-white { width: 12px; height: 12px; background-position: -31px -99px; }
+  &.pencil-white { width: 12px; height: 12px; background-position: -44px -99px; }
+  &.error { width: 12px; height: 12px; background-position: -59px -100px; }
+  &.plus-white { width: 14px; height: 14px; background-position: -74px -100px; }
+  &.x-gray { width: 14px; height: 14px; background-position: -91px -100px; }
+  &.upload-photo-gray { width: 50px; height: 35px; background-position: -209px -53px; }
+  &.player-tshirt-color { width: 34px; height: 34px; background-position: -148px -92px; }
+  &.league-color { width: 34px; height: 34px; background-position: -108px -94px; }
+  &.somos-brand-ball { width: 66px; height: 65px; background-position: -260px 0; }
+  &.user-icon-gray { width: 39px; height: 39px; background-position: -213px -6px; }
+  &.fb { width: 30px; height: 30px; background-position: -330px 0; margin-right:15px; }
+  &.tw { width: 30px; height: 30px; background-position: -363px 0; margin-right:15px;}
+  &.ig { width: 30px; height: 30px; background-position: -395px 0; }
+}
+
+.i{&.somos-brand { 
+  background-image: url('#{$background-path}/logo.svg');
+  width: 107px; 
+  height: 33px; 
+   /*@include max-screen(400px) {
+          width: 36px;
+    }*/
+  }}

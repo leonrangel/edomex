@@ -1,0 +1,101 @@
+<div class="modal fade">
+  <div class="modal-dialog register-user-modal">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!-- Content -->
+        <form id="form.register" class="user-form" method="post">
+          <div class="header">
+          <center><h2>Registrar Jugador</h2></center> 
+          </div>
+          <div class="content">
+            <div class="form-section no-border alpha">
+             
+              <div class="form-register">
+              <div class="label">
+                <label for="name">Nombre: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" id="name" name="name"
+                  placeholder="Nombre"
+                  data-validator-required
+                  data-validator-minlength="3"
+                  data-validator-maxlength="15">
+              </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="lastnameFather">Apellido Paterno: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" id="lastnameFather" name="lastnameFather"
+                  placeholder="Apellido Paterno"
+                  data-validator-required
+                  data-validator-minlength="3"
+                  data-validator-maxlength="15">
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="lastnameMother">Apellido Materno: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" id="lastnameMother" name="lastnameMother"
+                  placeholder="Apellido Materno"
+                  data-validator-required
+                  data-validator-minlength="3"
+                  data-validator-maxlength="15">
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="email">Correo Electrónico: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" id="email" name="email"
+                  placeholder="Correo Electrónico"
+                  data-validator-required
+                  data-validator-email
+                  data-validator-maxlength="40">
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="password">Contraseña: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="password" id="password" name="password"
+                  placeholder="Contraseña"
+                  data-validator-required
+                  data-validator-minlength="8">
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="pwdConf">Confirmar Contraseña: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="password" id="pwdConf" name="pwdConf"
+                  placeholder="Reescribir Contraseña"
+                  data-validator-required
+                  data-validator-confirmation="password"
+                  data-validator-confirmation-error="La contraseña no coincide con la confirmación">
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <p>
+                Al registrarte estás aceptando nuestra
+                <a href="#privacy" target="_blank">Política de Privacidad</a>.
+              </p>
+            </div>
+            <input type="hidden" name="type" value="player">
+          <div class="footer">
+            <input type="submit"
+                   value="Registrar"
+                   class="btn btn-primary btn-medium submit">
+            <div class="clr"></div>
+          </div><!-- hide -->
+        </form>
+        <!-- / Content -->
+      </div>
+    </div>
+  </div>
+</div>

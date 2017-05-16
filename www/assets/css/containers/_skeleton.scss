@@ -1,0 +1,28 @@
+.box-container {
+  .box-header {
+    padding: 13px 10px;
+    position: relative;
+
+  @include max-screen(450px) {
+  
+  h2{
+/*      text-indent: -9000px;*/
+      }
+    }
+
+    .actions {
+      position: absolute;
+      right: 10px;
+      top: 12px;
+
+      @include max-screen(450px) {
+/*      right: 40px;*/
+    }
+
+    }
+  } 
+
+  .box-footer {
+    padding: 10px;
+  }
+}

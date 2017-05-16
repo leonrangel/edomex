@@ -1,0 +1,416 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  margin-top: 10px;
+}
+
+p + p,
+img + p,
+p + img,
+img + img,
+p + ul,
+img + ul {
+  margin-top: 25px;
+}
+
+.header-inner {
+  position: relative;
+  @include clearfix;
+
+  .brand { 
+    float: left;
+    margin: 13px 10px 10px 10px;
+  }
+
+  .site-navigation {
+    float: left;
+    margin: 19px 10px 10px 0; 
+
+    ul li {
+      float: left;
+      margin-left: 10px;
+/*
+      &:first-child {
+        margin-left: 0;
+      }*/
+
+      a {
+        padding: 5px 0;
+      }
+    }
+  }
+}
+
+.not-logged-header {
+  padding-top: 10px;
+  margin-bottom: 10px;
+  @include clearfix;
+
+  .brand {
+    float: left;
+  }
+
+  .actions {
+    float: right;
+
+    a {
+      margin-left: 10px;
+    }
+  }
+}
+
+// Global User Box Header
+.header-user-box {
+  height: 60px;
+  float: right;
+
+  .user-box-inner {
+    padding: 10px 15px;
+    @include clearfix;
+  }
+
+  .user-avatar {
+    display: block;
+    float: left;
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+  }
+
+  .arrow {
+    display: block;
+    float: left;
+    margin: 15px 0;
+  }
+}
+
+#footer {
+  div.wrapper {
+    padding: 35px 0;
+  }
+
+  ul {
+    margin-top: 5px;
+  }
+
+  .brand-footer {
+    float: right;
+
+    p {
+      float: right;
+      margin: 11px 10px 0 0;
+    }
+
+    .i {
+      float: right;
+    }
+  }
+
+  br {
+    clear: both;
+  }
+
+  .social {
+    margin-top: 10px;
+    float: right;
+
+    .fb {
+      margin-bottom: 10px;
+    }
+  }
+
+  @include max-screen(640px) {
+    ul {
+      margin-bottom: 30px;
+    }
+    
+    .brand-footer {
+      float: none;
+
+      p {
+        float: none;
+      }
+
+      .i {
+        float: none;
+      }
+    }
+
+    .social {
+      float: none;
+    }
+  }
+}
+
+.page {
+  padding: 50px 0;
+}
+
+// Headers 
+.basic-header-nav {
+  
+  .extract {
+    height: 300px;
+    position: relative;
+
+    &:after {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .avatar {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    padding: 3px;
+    z-index: 5;
+
+    img {
+      display: block;
+    }
+
+    span {
+      overflow: hidden;
+    }
+  }
+
+  .title {
+    position: absolute;
+    top: 120px;
+    left: 125px;
+    z-index: 5;
+  }
+
+  .nav {
+    position: relative;
+    
+    ul {
+      margin-left: 10px;
+      @include clearfix;
+  
+      li {
+        float: left;
+      }
+  
+      a {
+        display: block;
+        padding: 15px 10px;
+      }
+    }
+  }
+}
+
+// Links List
+.links-list {
+  ul li a {
+    display: block;
+    padding: 10px;
+    
+
+    h5 {
+      margin-bottom: 5px;
+    }
+  }
+
+  .load-more-links {
+    display: block;
+    padding: 10px;
+  }
+}
+
+// Recent Photos Thumbs
+.recent-photos-thumbs {
+  padding: 10px;
+
+  ul {
+    @include clearfix;
+    margin-bottom: 10px;
+
+    li {
+      float: left;
+      width: 25%;
+    }
+
+
+    span {
+      display: block;
+      margin: 2px;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      height: 0;
+      padding-bottom: 100%;
+    }
+  }
+}
+
+// Tabs
+.primary-tabs {
+  ul {
+    @include clearfix;
+
+    li {
+      float: left;
+    }
+
+    a {
+      display: block;
+      padding: 12px 10px;
+
+      &.active {
+        margin: 0 -1px;
+        padding: 12px 11px;
+      }
+    }
+
+    li:first-child a.active {
+      margin: 0 -1px 0 0;
+      padding: 12px 11px 12px 10px;
+    }
+  }
+}
+
+// Content List
+.content-list {
+  > ul > li {
+    padding: 13px 10px;
+  }
+
+  .meta {
+    margin-top: 10px;
+    display: block;
+    @include clearfix;
+
+    ul li {
+      float: left;
+      padding-right: 10px;
+    }
+  }
+
+  .load-more-content {
+    display: block;
+    padding: 13px 10px;
+  }
+}
+
+// Information List
+.information-list {
+  ul li {
+    padding: 10px;
+    @include clearfix;
+
+    &.w-counter {
+      h5 {
+        float: left;
+      }
+
+      .counter {
+        float: right;
+      }
+    }
+  }
+
+  h5 {
+    margin: 0 0 3px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+// Standalone Title Bar
+.standalone-title .main {
+  @include clearfix;
+
+  .content {
+    margin: 15px;
+    float: left;
+  }
+
+  .actions {
+    margin: 15px;
+    float: right;
+  }
+}
+
+.sidebar {
+  .sidebar-title {
+    padding: 12px 10px;
+  }
+}
+
+.sidebar-list {
+  li a {
+    display: block;
+    padding: 12px 10px;
+    padding-left: 7px;
+    }
+  }
+
+  .sidebar-mobile{
+    @include max-screen(640px) {
+      display: none;
+    }
+  }
+     
+
+#nav-mobile{
+    display: none;
+    background: url("../img/background/pack.png");
+    background-repeat: no-repeat;
+    background-position: -227px -95px;
+    background-position-x: -227px;
+    background-position-y: -95px;
+    float: right;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    
+    @include max-screen(640px) {
+      display: block;
+    }
+}
+
+#nav-mobile.nav-active{
+        opacity: 1;
+    }
+
+// Loading More Content
+.load-more-content {
+  padding: 15px 10px;
+}
+
+.lightbox-holder {
+  display: block;
+  width: 100%;
+  height: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.page-content {
+  padding: 60px 0;
+}

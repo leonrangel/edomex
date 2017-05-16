@@ -1,0 +1,107 @@
+<div class="col-inner" section="contact">
+  <div class="container">
+    <div class="box-container mb">
+      <div class="box-header">
+        <h2>Contacto</h2>
+      </div>
+      <form action="#">
+        <div class="box-main">
+          <div class="form-section alpha">
+            <div class="label">
+              <label for="">Persona de Contacto: <span class="rqd">*</span></label>
+            </div>
+            <div class="main">
+              <div class="cols-16">
+                <div class="col col-10 alpha omega">
+                  <div class="col-inner">
+                    <input type="text"
+                           name="name"
+                           placeholder="Ejemplo. Juan Perez"
+                           data-validator-required
+                           value="{{contact.name}}">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="label">
+              <label for="">Teléfono: <span class="rqd">*</span></label>
+            </div>
+            <div class="main">
+              <div class="cols-16">
+                <div class="col col-10 alpha omega">
+                  <div class="col-inner">
+                    <input type="text"
+                           name="phone"
+                           placeholder="Ejemplo. 554-253-7899"
+                           data-validator-required
+                           value="{{contact.phone}}">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="label">
+              <label for="">Teléfono Movil: <span class="rqd">*</span></label>
+            </div>
+            <div class="main">
+              <div class="cols-16">
+                <div class="col col-10 alpha omega">
+                  <div class="col-inner">
+                    <input type="text"
+                           name="mobile"
+                           placeholder="Ejemplo. 554-253-7899"
+                           data-validator-required
+                           value="{{contact.mobile}}">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="label">
+              <label for="">Correo Electrónico: <span class="rqd">*</span></label>
+            </div>
+            <div class="main">
+              <div class="cols-16">
+                <div class="col col-10 alpha omega">
+                  <div class="col-inner">
+                    <input type="text"
+                           name="email"
+                           placeholder="Ejemplo. 554-253-7899"
+                           data-validator-required
+                           data-validator-email
+                           value="{{contact.email}}">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="label">
+              <label for="">Dirección: <span class="rqd">*</span></label>
+            </div>
+            <div class="main">
+              <div class="cols-16">
+                <div class="col col-10 alpha omega">
+                  <div class="col-inner">
+                    <input type="text"
+                           name="address"
+                           placeholder="Ejemplo. Calle 6 #910, Cordoba, Veracruz"
+                           data-validator-required
+                           value="{{address}}">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-footer">
+          <input type="submit" value="Guardar Cambios" class="btn btn-primary save">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

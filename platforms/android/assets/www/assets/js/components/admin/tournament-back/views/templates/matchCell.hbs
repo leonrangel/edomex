@@ -1,0 +1,30 @@
+<div class="match expanded">
+  <div class="teams">
+    <span class="vs">vs</span>
+    <div class="team">
+        {{#if results.filled}}
+        <span class="goals first">{{results.goalsB.length}}</span>
+        {{/if}}
+      <div class="team-inner">
+        <span class="img" style="background-image: url( 'https://www.somosfut.com/team/{{teamA._id}}/avatar' );"></span>
+        <h4 class="name">{{teamA.name}}</h4>
+      </div>
+    </div>
+    <div class="team">
+       {{#if results.filled}}
+        <span class="goals last">{{results.goalsA.length}}</span>
+        {{/if}}
+      <div class="team-inner">
+        <span class="img" style="background-image: url( 'https://www.somosfut.com/team/{{teamB._id}}/avatar' );"></span>
+        <h4 class="name">{{teamB.name}}</h4>
+      </div>
+    </div>
+  </div>
+   <div class="info">
+    <p><b>Horario:</b> {{formatDate 'dddd, MMMM Do YYYY - hh:mm' date}}{{#if address}}<br> <b>Lugar:</b> {{address}}{{/if}} <br>{{{dynLabel}}}</p>
+  </div>
+  <div class="edit">
+    <button class="btn btn-secondary editar">Editar Partido</button>
+    <button class="btn btn-primary resultados" onclick="setTimeout(function(){window.scrollTo(0, 0);},300);">Capturar Resultado</button>
+  </div>
+</div>

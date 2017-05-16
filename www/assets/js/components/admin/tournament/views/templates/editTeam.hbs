@@ -1,0 +1,113 @@
+<div class="modal fade">
+  <div class="modal-dialog register-user-modal">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!-- Content -->
+        <form class="user-form" method="post">
+          <div class="header">
+            <h2>Editar Equipo</h2>
+          </div>
+          <div class="content">
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="email">Nombre del Equipo: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="name"
+                       placeholder="Nombre del Equipo"
+                       data-validator-required value="{{name}}">
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="" 
+                  class="hasTip"
+                  title="En esta dirección podras consultar tu perfil público de equipo somosfut.com/#equipo/ACCESO">Acceso de Perfil: <span class="rqd">*</span>
+                </label>
+              </div>
+              <div class="main">
+                <input type="text" 
+                       name="url"
+                       placeholder="Ejemplo: somosfut-fc"
+                       data-validator-required
+                       data-validator-string value="{{url}}">
+              </div>
+            </div>
+
+            <div class="form-section no-border" style="display:none;">
+              <div class="label">
+                <label for="" >Grupo: 
+                </label>
+              </div>
+              <div class="main">
+                <select id="selGpo" data-validator-required="" data-validator-error="" style="width: 100%;">
+                  
+                </select>
+              </div>
+            </div>
+
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="" >Capitán: 
+                </label>
+              </div>
+              <div class="main">
+                <select id="selCap" data-validator-required="" data-validator-error="" style="width: 100%;">
+                  <option disabled="disabled">{{team.admins.0.name}} {{team.admins.0.lastnameFather}}</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-section no-border">
+              <div class="label">
+                <label for=""> 
+                  Cambiar fondo: 
+                </label>
+              </div>
+              <div class="main">
+                <div id="display-front" style="background-image: url('https://www.somosfut.com/team/{{_id}}/front'); border-radius: 2px; background-size: cover; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 0px 1px; width: 82px; height: 82px; border: 4px solid rgb(255, 255, 255);"></div>
+                <input name="front" type="file" data-validator-error="">
+              </div>
+            </div>
+
+            <div class="form-section no-border">
+              <div class="label">
+                <label for=""> 
+                  Cambiar Avatar: 
+                </label>
+              </div>
+              <div class="main">
+                <div id="display-avatar" style="background-image: url('https://www.somosfut.com/team/{{_id}}/avatar'); border-radius: 2px; background-size: cover; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 0px 1px; width: 82px; height: 82px; border: 4px solid rgb(255, 255, 255);"></div>
+                <input name="avatar" type="file" data-validator-error="">
+              </div>
+            </div>
+
+          </div>
+          <div class="footer">
+            <button id="saveChanges" class="btn btn-primary btn-medium submit">Guardar Cambios</button>
+            <div class="clr"></div>
+          </div>
+        </form>
+        <div class="user-form">
+          <div class="content">
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="" >Eliminar :
+                </label>
+              </div>
+              <div class="main">
+                <div class="alert alert-danger" style="color: #a94442;background-color: #f2dede;border-color: #ebccd1;">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  Eliminar equipo : 
+                  <button id="deleteTeam" class="btn btn-secondary">Eliminar ahora</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- / Content -->
+      </div>
+    </div>
+  </div>
+</div>

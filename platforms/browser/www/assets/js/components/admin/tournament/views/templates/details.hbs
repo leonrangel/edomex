@@ -1,0 +1,81 @@
+<div class="col-inner">
+  <div class="container">
+    <div class="box-container mb">
+      <div class="box-header">
+        <h2>Editar Torneo</h2>
+      </div>
+      <form action="#" method="post" enctype="multipart/form-data">
+        <div class="box-main">
+          <div class="form-section">
+            <div class="label">
+              <label for="">Nombre: <span class="rqd">*</span></label>
+            </div>
+            <div class="main">
+              <div class="cols-16">
+                <div class="col col-10 alpha omega">
+                  <div class="col-inner">
+                    <input type="text"
+                           name="name"
+                           placeholder="Nombre del Torneo"
+                           data-validator-required
+                           value="{{name}}">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="label">
+              <label for="startDate">Fechas de Torneo: <span class="rqd">*</span></label>
+            </div>
+            <div class="main input-daterange">
+              <input type="text" name="startDate"
+                     placeholder="Fecha de Arranque"
+                     data-validator-required />
+              <br />
+              <br />
+              <input type="text" name="endDate" 
+                     placeholder="Fecha de Cierre"
+                     data-validator-required />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+            <div class="label">
+              <label for="">Numero de equipos: <span class="rqd">*</span></label>
+            </div>
+            <div class="main">
+              <input style="width:100px;" type="number" name="noteams" min="{{minTeams}}" max="100" step="1" value="{{countTeams}}" >
+            </div>
+          
+        </div>
+
+        <div class="form-section">
+            <div class="label">
+              <label for="">Grupos (para activar los grupos escribalos separados por comas): </label>
+            </div>
+            <div class="main">
+              <input type="text" name="namegpos" placeholder="Grupo A, Grupo B, Grupo C,..."  value="{{groups}}" >
+            </div>
+          
+        </div>
+
+
+        
+        <div class="form-section">
+          <div class="label">
+            <label for="">Logo de Torneo: <span class="rqd">*</span></label>
+          </div>
+          <div class="main">
+            <div id="display-logo" style="background-image: url('https://www.somosfut.com/tournament/{{_id}}/avatar');"></div>
+            <input type="file" name="avatar">
+          </div>
+        </div>
+        <div class="box-footer">
+          <input type="submit" value="Guardar Cambios" class="btn btn-primary save">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,168 @@
+<div class="col-inner" section="info">
+  <div class="container">
+    <div class="box-container mb">
+      <div class="box-header">
+        <h2>Información Básica</h2>
+      </div>
+      <form action="#" method="post" enctype="multipart/form-data">
+        <div class="box-main">
+          <div class="form-section alpha">
+            <div class="label">
+              <label for="">Nombre: <span class="rqd">*</span></label>
+            </div>
+            <div class="main">
+              <div class="cols-16">
+                <div class="col col-10 alpha omega">
+                  <div class="col-inner">
+                    <input type="text"
+                           name="name"
+                           placeholder="Ejemplo. Cancha Mete Gol"
+                           data-validator-required
+                           value="{{name}}">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="label">
+              <label for="">Tipo de Fútbol: <span class="rqd">*</span></label>
+            </div>
+            <div class="main">
+              <select name="type" data-validator-required>
+                <option selected="selected"
+                        disabled="disabled"
+                        value="-">Selecciona una opción</option>
+                <option value="Fútbol 7">Fútbol 7</option>
+                <option value="Rápido">Fútbol Rápido</option>
+                <option value="Soccer">Fútbol Soccer</option>
+                <option value="Salón">Fútbol de Salón</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="label">
+              <label for="">Logo de liga: <span class="rqd">*</span></label>
+            </div>
+            <div class="main">
+              <div id="display-logo" style="background-image: url('https://www.somosfut.com/league/{{_id}}/avatar');"></div>
+              <input name="avatar" type="file" accept="image/*">
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="label">
+              <label for="">Imagen de Portada: <span class="rqd">*</span></label>
+            </div>
+            <div class="main">
+              <div id="display-front" style="background-image: url('/league/{{_id}}/front');"></div>
+              <input name="front" type="file" accept="image/*">
+            </div> 
+          </div>
+          <div class="form-section">
+            <div class="label">
+              <label for="">Precios: <span class="rqd">*</span></label>
+            </div>
+            <div class="main">
+              <div class="subsection">
+                <div class="cols-16">
+                  <div class="col col-2 alpha">
+                    <div class="col-inner">
+                      <label class="sub-label vertical" for="">Arbitraje</label>
+                    </div>
+                  </div>
+                  <div class="col col-8 omega">
+                    <div class="col-inner">
+                      <input type="text" name="match"
+                             placeholder="Ejemplo. 200"
+                             data-validator-required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="subsection">
+                <div class="cols-16">
+                  <div class="col col-2 alpha">
+                    <div class="col-inner">
+                      <label class="sub-label vertical" for="">Inscripción</label>
+                    </div>
+                  </div>
+                  <div class="col col-8 omega">
+                    <div class="col-inner">
+                      <input type="text" name="inscription"
+                             placeholder="Ejemplo. 200"
+                             data-validator-required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="label">
+              <label for="">Dirección personalizada: <span class="rqd">*</span></label>
+            </div>
+            <div class="main">
+              <div class="cols-16">
+                <div class="col col-10 alpha omega">
+                  <div class="col-inner">
+                    <div class="tagged-input league-url">
+                      <span class="tag">/#liga/</span>
+                      <input type="text"
+                             name="url"
+                             placeholder="Ejemplo. cancha-metegol">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box-main">
+            <div class="form-section alpha">
+              <div class="label">
+                <label for="">URL botón de Mercado Pago: </label>
+              </div>
+              <div class="main">
+                <div class="cols-16">
+                  <div class="col col-10 alpha omega">
+                    <div class="col-inner">
+                      <input type="text" name="payment"
+                               placeholder="Pega el código que te proporcionó Mercado Pago"
+                               data-validator-required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-section checkable">
+              <div class="label">
+                <input type="checkbox" name="managePayments">
+                <label for="referee">Manejo de adeudos y arbitrajes: <span class="rqd">*</span></label>
+                <p>Utilizar la plataforma para llevar el control del pago en arbitraje por partido por equipo</p>
+              </div>
+            </div>
+          </div>
+          <div class="box-main">
+            <div class="form-section alpha">
+              <div class="label">URL mapa Google Maps:</div>
+              <div class="main">
+                <div class="cols-16">
+                  <div class="col col-10 alpha omega">
+                    <div class="col-inner">
+                      <input type="text" name="map"
+                               placeholder="Pega el código que te proporcionó Mercado Pago"
+                               data-validator-required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box-footer">
+            <input type="submit" value="Guardar Cambios" class="btn btn-primary save">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

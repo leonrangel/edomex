@@ -1,0 +1,143 @@
+.league-admin-header {
+  @include primary-box-style;
+
+  .avatar {
+    border-radius: $radius;
+
+    img {
+      vertical-align: middle;
+    }
+  }
+
+  .name {
+    font-size: 18px;
+    color: $white-color;
+    line-height: 45px;
+  }
+
+  .site-navigation ul li a {
+    color: #e5e5e5;
+    font-size: 13px;
+  }
+}
+
+.league-tournaments {
+  @include secondary-box-style;
+
+  .head {
+    text-align: center;
+  }
+
+  .tournaments {
+    .control {
+      @include pack-background;
+
+      &.prev {
+        background-position: 0 -97px;
+      }
+
+      &.next {
+        background-position: -15px -97px;
+      }
+    }
+
+    ul li a {
+      text-align: center;
+      border-bottom: 4px solid transparent;
+      overflow:hidden;
+       white-space:nowrap;
+     text-overflow: ellipsis;
+      
+      span.img {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+      }
+      
+      &:hover {
+        opacity: .5;
+      }
+
+      &.active {
+        border-color: $primary-color;
+        opacity: 1;
+        @include background(linear-gradient($white-color, lighten($primary-color, 65%)) left repeat);
+      }
+    }
+  }
+}
+
+.league-map {
+  border-radius: 0 0 $radius $radius;
+}
+
+// League Admin
+.tournamets-cards-list {
+  .tournament-card {
+    text-align: center;
+    @include secondary-box-style;
+
+    .info {
+      vertical-align: middle;
+      
+      span.image {
+        display: block;
+        margin: 6px auto;
+        width: 120px;
+        height: 120px;
+        background-size: cover;
+      }
+    }
+
+    p {
+      @extend .meta-data;
+    }
+  }
+}
+
+.league-a-tournamet-extract {
+  padding: 10px;
+  
+  span.image {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-size: cover;
+    vertical-align: -5px;
+    margin-right: 6px;
+  }
+
+  .title {
+    color: $white-color;
+    font-size: 14px;
+  }
+}
+
+// Calendar Controls
+.date-controls {
+  text-align: center;
+  background: #f7f7f7;
+  border-bottom: 1px solid $separator-color;
+}
+
+.facilities-photos {
+  span {
+    > a {
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2);
+      border-radius: $radius;
+      @include cover-background;
+    }
+
+    .upload-inline-photo {
+      cursor: pointer;
+      background: #f4f4f4;
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .07);
+      border-radius: $radius;
+
+      &:hover {
+        background: #ededed;
+      }
+    }
+  }
+}

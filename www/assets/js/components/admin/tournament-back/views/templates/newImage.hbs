@@ -1,0 +1,45 @@
+<div class="modal fade">
+  <div class="modal-dialog register-user-modal">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!-- Content -->
+        <form class="user-form" method="post">
+          <div class="header">
+            <h2>Agregar Imagen</h2>
+          </div>
+          <div class="content">
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="name">Título: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="text"
+                       name="title"
+                       placeholder="Pie de Foto">
+              </div>
+            </div>
+            <div class="form-section no-border">
+              <div class="label">
+                <label for="name">Imagen: <span class="rqd">*</span></label>
+              </div>
+              <div class="main">
+                <input type="file"
+                       name="photo"
+                       accept="image/*"
+                       data-validator-required>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <input type="submit"
+                   value="Guardar Imagen"
+                   class="btn btn-primary btn-medium submit">
+            <div class="clr"></div>
+          </div>
+          <input name="type" type="hidden" value="image">
+        </form>
+        <!-- / Content -->
+      </div>
+    </div>
+  </div>
+</div>

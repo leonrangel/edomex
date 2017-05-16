@@ -1,0 +1,104 @@
+.matches-list .match {
+  border-top: 1px solid $separator-color;
+
+  &:first-child {
+    border-top: 0;
+  }
+}
+
+.match {
+  .vs {
+    font-size: 18px;
+    color: #cecece;
+    text-align: center;
+  }
+
+  .team {
+    text-align: center;
+
+    .name {
+      color: $text-color;
+    }
+  }
+
+  .info {
+    text-align: center;
+
+    p {
+      color: $meta-color;
+      font-family: $secondary-font;
+      @include text-size-x-small;
+    }
+  }
+
+  &:hover {
+    background: tint($primary-color, 98%);
+  }
+
+  &.no-link:hover {
+    background: none;
+  } 
+}
+
+.match-statistics {
+  .team .inner {
+    &:first-child {
+      border-right: 1px solid $separator-color;
+    }
+
+    &:last-child {
+      border-left: 1px solid $separator-color;
+    }
+  }
+
+  .section {
+    border-top: 1px dashed $separator-color;
+    min-height: 300px;
+
+    .actions {
+      a {
+        font-size: 11px;
+      }
+
+      label {
+        font-size: 11px;
+      }
+    }
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+
+  .players {
+    h6 {
+      font-size: 11px;
+      line-height: 24px;
+    }
+  }
+}
+
+.section:nth-of-type(1) {
+    min-height: 0px;
+}
+
+.section:nth-of-type(5) {
+    min-height: 0px;
+}
+
+.section ul pre:empty::before {
+  content: 'No se he especificado un reglamento';
+   text-align: center;
+   padding-top: 45px;
+   font-size: 20px;
+   font-weight: lighter;
+   color: black;
+   display: block;
+   height: 100px; 
+}
+
+.team-details h4.name{
+    overflow: hidden;  
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}

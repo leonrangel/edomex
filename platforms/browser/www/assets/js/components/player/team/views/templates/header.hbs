@@ -1,0 +1,43 @@
+<div class="cols-16">
+  <div class="col col-16">
+    <div class="col-inner">
+      <form action="#" method="post">
+        <div class="basic-header-nav mb">
+          <div class="extract" style="background-image: url('https://www.somosfut.com/team/{{_id}}/front');">
+            <input name="front" type="file" class="upload-background">
+            <div class="avatar" style="background-image: url('https://www.somosfut.com/team/{{_id}}/avatar');">
+              <input name="avatar" type="file" class="upload-avatar">
+            </div>
+            <div class="title">
+              <h1>{{name}}</h1>
+              <h5>www.somosfut.com/#equipo/<span>{{url}}</span></h5>
+              <button id="saveChanges" class="btn btn-secondary hidden">Guardar Cambios</button>
+            </div>
+          </div>
+          <div class="nav">
+            <ul>
+              <li class="active">
+                <a href="wall">Muro</a>
+              </li>
+              <li>
+                <a href="matches">Partidos</a>
+              </li>
+              <li>
+                <a href="statistics">Estadísticas</a>
+              </li>
+              <li>
+                <a href="members">Miembros</a>
+              </li>
+              <li>
+                <a href="info">Información</a>
+              </li>
+              <li class="disabled hasTip" title="Necesitas ser administrador del equipo para inscribirte a un torneo" id="joinTournament">
+                <a href="joinTournament">Unirse a un Torneo</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

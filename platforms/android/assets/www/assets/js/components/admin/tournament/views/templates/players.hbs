@@ -1,0 +1,46 @@
+<div class="col-inner">
+  <div class="container">
+    <div class="box-container mb">
+      <div class="box-header">
+        <h2>Jugadores</h2>
+        <div class="actions">
+          <button class="btn btn-primary create">+ Jugador</button>
+        </div>
+      </div>
+      <div class="box-main">
+        <table class="primary-table">
+          <thead>
+            <tr>
+              <th>Jugador</th>
+              <th></th>
+<!--               <th>Correo Electrónico</th> -->
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each players}}
+            <tr>
+              <td>
+                <a href="#jugador/{{url}}">
+                  <span class="img" style="background-image:url('https://www.somosfut.com/user/{{_id}}/avatar');"></span>
+                  {{name}} {{lastnameFather}} {{lastnameMother}}
+                </a>
+              </td>
+              <td>
+                <a href="#equipo/{{teams.0.url}}">
+                  <span class="img" style="background-image:url('https://www.somosfut.com/team/{{teams.0._id}}/avatar');"></span>
+                  {{teams.0.name}}
+                </a>
+              </td>
+              <!-- <td>{{email}}</td> -->
+              <td>
+                <button data-ids="{{_id}}" class="btn btn-primary edit">Editar</button>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

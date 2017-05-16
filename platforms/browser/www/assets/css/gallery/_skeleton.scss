@@ -1,0 +1,56 @@
+.gallery {
+  .title {
+    padding: 15px 10px 10px 10px;
+  }
+
+  .load-more-photos {
+    padding: 10px 10px 20px 10px;
+  }
+}
+
+.photos {
+  padding: 5px;
+  @include clearfix;
+
+  > ul > li {
+    float: left;
+    width: (100% / 5);
+  }
+
+  span > a {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 100%;
+  }
+}
+
+.photo {
+  display: block;
+  margin: 5px;
+  position: relative;
+
+  &:hover .actions {
+    display: block;
+  }
+  
+  .actions {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 5;
+    display: none;
+
+
+    li {
+      float: left;
+
+      span {
+        display: block;
+        height: 20px;
+        padding: 0px 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,305 @@
+<div class="first-login-complete-profile">
+  <div class="wrapper">
+    <div class="cols-16">
+      <div class="col col-3"></div>
+      <div class="col col-10">
+        <div class="col-inner">
+          <div class="title">
+            <h1>¡Bienvenido {{name}} {{lastnameFather}}!</h1>
+            <p>Por favor completa tu perfil de jugador.</p>
+          </div>
+          <form id="profile-form" method="post" enctype="multipart/form-data">
+            <div class="first-login-profile-form">
+              <label class="upload-avatar-button">
+                <i class="i user-icon-gray"></i>
+                <span>Sube tu foto</span>
+                <span class="hidden"><input name="avatar" type="file"></span>
+              </label>
+              <div class="content">
+                <div class="cols-12">
+                  <div class="col col-6 alpha omega">
+                    <div class="col-inner">
+                      <div class="form-section no-border">
+                        <div class="label">
+                          <label for="">Género: <span class="rqd">*</span></label>
+                        </div>
+                        <div class="main">
+                          <select name="info[gender]" data-validator-required>
+                            <option value="-" 
+                                    disabled="disabled"
+                                    selected="selected">Seleccione una opción</option>
+                            <option value="male">Masculino</option>
+                            <option value="female">Femenino</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-section no-border">
+                        <div class="label">
+                          <label for="">Estatura: (cm) <span class="rqd">*</span></label>
+                        </div>
+                        <div class="main">
+                          <input type="text" 
+                                 name="info[stature]"
+                                 value="{{info.stature}}"
+                                 placeholder="Ejemplo: 170"
+                                 data-validator-required
+                                 data-validator-integer>
+                        </div>
+                      </div>
+                      <div class="form-section no-border">
+                        <div class="label">
+                          <label for="">Posición: <span class="rqd">*</span></label>
+                        </div>
+                        <div class="main">
+                          <select name="info[position]" data-validator-required>
+                            <option value="-" 
+                                    disabled="disabled"
+                                    selected="selected">Seleccione una opción</option>
+                            <option value="Delantero">Delantero</option>
+                            <option value="Portero">Portero</option>
+                            <option value="Defensa">Defensa</option>
+                            <option value="Medio">Medio</option>
+                            <option value="Director Técnico">Director Técnico</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-section no-border">
+                        <div class="label">
+                          <label for="">País de nacimiento: <span class="rqd">*</span></label>
+                        </div>
+                        <div class="main">
+                          <select name="info[country]" data-validator-required>
+                            <option value="-" 
+                                    disabled="disabled"
+                                    selected="selected">Seleccione una opción</option>
+                            <option value="México">México</option>
+                            <option value="USA">Estados Unidos de America</option>
+                            <option value="Brasil">Brasil</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Otro">Otro</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-section no-border">
+                        <div class="label">
+                          <label for="">Apodo: <span class="rqd">*</span></label>
+                        </div>
+                        <div class="main">
+                          <input type="text" 
+                                 name="info[nickname]"
+                                 value="{{info.nickname}}"
+                                 placeholder="Ejemplo: Chicharito"
+                                 data-validator-required
+                                 data-validator-string>
+                        </div>
+                      </div>
+                      <div class="form-section no-border">
+                        <div class="label">
+                          <label for="mobile">Teléfono celular: (Opcional)</label>
+                          <p>Recibe notificaciones en tu celular.</p>
+                        </div>
+                        <div class="main">
+                          <input type="text" id="mobile" name="mobile" placeholder="(55) 5555-5555">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-6 alpha omega">
+                    <div class="col-inner">
+                      <div class="form-section no-border">
+                        <div class="label">
+                          <label for="">Pierna hábil: <span class="rqd">*</span></label>
+                        </div>
+                        <div class="main">
+                          <select name="info[profile]" data-validator-required>
+                            <option value="-" 
+                                    disabled="disabled"
+                                    selected="selected">Seleccione una opción</option>
+                            <option value="Zurdo">Zurdo</option>
+                            <option value="Diestro">Diestro</option>
+                            <option value="Ambidiestro">Ambidiestro</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-section no-border">
+                        <div class="label">
+                          <label for="">Peso: (kg) <span class="rqd">*</span></label>
+                        </div>
+                        <div class="main">
+                          <input type="text"
+                                 name="info[weigth]"
+                                 value="{{info.weigth}}"
+                                 placeholder="Ejemplo: 65"
+                                 data-validator-required
+                                 data-validator-integer>
+                        </div>
+                      </div>
+                      <div class="form-section no-border">
+                        <div class="label">
+                          <label for="">Número de playera: <span class="rqd">*</span></label>
+                        </div>
+                        <div class="main">
+                          <input type="text"
+                                 name="info[number]"
+                                 value="{{info.number}}"
+                                 placeholder="Ejemplo: 7"
+                                 data-validator-required
+                                 data-validator-integer>
+                        </div>
+                      </div>
+                      <div class="form-section no-border">
+                        <div class="label">
+                          <label for="">Fecha de nacimiento: <span class="rqd">*</span></label>
+                        </div>
+                        <div class="main">
+                          <div class="birth-data-selects">
+                            <select name="birth[day]" data-validator-required="">
+                              <option value="-" 
+                                      disabled="disabled"
+                                      selected="selected">Día</option>
+                              <option value="01">1</option>
+                              <option value="02">2</option>
+                              <option value="03">3</option>
+                              <option value="04">4</option>
+                              <option value="05">5</option>
+                              <option value="06">6</option>
+                              <option value="07">7</option>
+                              <option value="08">8</option>
+                              <option value="09">9</option>
+                              <option value="10">10</option>
+                              <option value="11">11</option>
+                              <option value="12">12</option>
+                              <option value="13">13</option>
+                              <option value="14">14</option>
+                              <option value="15">15</option>
+                              <option value="16">16</option>
+                              <option value="17">17</option>
+                              <option value="18">18</option>
+                              <option value="19">19</option>
+                              <option value="20">20</option>
+                              <option value="21">21</option>
+                              <option value="22">22</option>
+                              <option value="23">23</option>
+                              <option value="24">24</option>
+                              <option value="25">25</option>
+                              <option value="26">26</option>
+                              <option value="27">27</option>
+                              <option value="28">28</option>
+                              <option value="29">29</option>
+                              <option value="30">30</option>
+                              <option value="31">31</option>
+                            </select>
+                            <select name="birth[month]" data-validator-required="">
+                              <option value="-" 
+                                      disabled="disabled"
+                                      selected="selected">Mes</option>
+                              <option value="Jan">Enero</option>
+                              <option value="Feb">Febrero</option>
+                              <option value="Mar">Marzo</option>
+                              <option value="Apr">Abril</option>
+                              <option value="May">Mayo</option>
+                              <option value="Jun">Junio</option>
+                              <option value="Jul">Julio</option>
+                              <option value="Aug">Agosto</option>
+                              <option value="Sept">Septiembre</option>
+                              <option value="Oct">Octubre</option>
+                              <option value="Nov">Noviembre</option>
+                              <option value="Dec">Diciembre</option>
+                            </select>
+                            <select name="birth[year]" data-validator-required="">
+                              <option value="-" 
+                                      disabled="disabled"
+                                      selected="selected">Año</option>
+                              <option value="1950">1950</option>
+                              <option value="1951">1951</option>
+                              <option value="1952">1984</option>
+                              <option value="1953">1952</option>
+                              <option value="1954">1954</option>
+                              <option value="1955">1955</option>
+                              <option value="1956">1956</option>
+                              <option value="1957">1957</option>
+                              <option value="1958">1958</option>
+                              <option value="1959">1959</option>
+                              <option value="1960">1960</option>
+                              <option value="1961">1961</option>       
+                              <option value="1962">1962</option>
+                              <option value="1963">1963</option>
+                              <option value="1964">1964</option>
+                              <option value="1965">1965</option>
+                              <option value="1966">1966</option>
+                              <option value="1967">1967</option>
+                              <option value="1968">1968</option>
+                              <option value="1969">1969</option>
+                              <option value="1970">1970</option>
+                              <option value="1971">1971</option>
+                              <option value="1972">1972</option>
+                              <option value="1973">1973</option>
+                              <option value="1974">1974</option>
+                              <option value="1975">1975</option>
+                              <option value="1976">1976</option>
+                              <option value="1977">1977</option>
+                              <option value="1978">1978</option>
+                              <option value="1979">1979</option>
+                              <option value="1980">1980</option>
+                              <option value="1981">1981</option>
+                              <option value="1982">1982</option>
+                              <option value="1983">1983</option>       
+                              <option value="1984">1984</option>
+                              <option value="1985">1985</option>
+                              <option value="1986">1986</option>
+                              <option value="1987">1987</option>
+                              <option value="1988">1988</option>
+                              <option value="1989">1989</option>
+                              <option value="1990">1990</option>
+                              <option value="1991">1991</option>
+                              <option value="1992">1992</option>
+                              <option value="1993">1993</option>
+                              <option value="1994">1994</option>
+                              <option value="1995">1995</option>
+                              <option value="1996">1996</option> 
+                              <option value="1997">1997</option>
+                              <option value="1998">1998</option>
+                              <option value="1999">1999</option> 
+                              <option value="2000">2000</option>
+                              <option value="2001">2001</option>
+                              <option value="2002">2002</option>
+                              <option value="2003">2003</option>
+                              <option value="2004">2004</option>
+                              <option value="2005">2005</option>
+
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-section no-border">
+                        <div class="label">
+                          <label for="" 
+                            class="hasTip"
+                            title="En esta dirección podrás consultar tu perfil público de jugador Somos Fut.com/#jugador/ACCESO">Acceso de Perfil: <span class="rqd">*</span>
+                          </label>
+                        </div>
+                        <div class="main">
+                          <input type="text" 
+                                 name="url"
+                                 value="{{url}}"
+                                 placeholder="Ejemplo: leon-rangel"
+                                 data-validator-required
+                                 data-validator-string>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer">
+                <input type="submit"
+                       class="btn btn-primary btn-medium"
+                       value="Guardar Información">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

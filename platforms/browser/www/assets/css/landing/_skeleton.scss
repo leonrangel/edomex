@@ -1,0 +1,421 @@
+.landing-header {
+  height: 60px;
+  position: relative;
+
+  .landing-header-inner {
+    @include clearfix;
+  }
+
+  .brand {
+    float: left;
+    margin-top: 12px;
+  }
+
+  .site-navigation {
+    float: left;
+    margin-top: 21px;
+    margin-left:20px;
+
+    ul li {
+      float: left;
+      margin-left: 20px;
+
+      a {
+        padding-bottom: 10px;
+
+         @include max-screen(760px) {
+    font-size: 10px;
+      }
+      }
+    }
+  }
+
+  .user-menu-wrapper {
+    float: right;
+    margin-top: 21px;
+
+    ul li {
+      float: left;
+      margin-left: 20px;
+    }
+
+    .signup {
+      padding: 10px;
+    }
+  }
+
+
+  @include max-screen(650px) {
+    height: auto;
+    padding-bottom: 26px;
+
+    .brand {
+      float: none;
+      margin-top: 0;
+      padding-top: 10px;
+      margin-left:-200px;
+      text-align: center;
+    }
+
+    .site-navigation {
+      float: none;
+      margin-top: 15px;
+      text-align: center;
+
+      ul li {
+        float: none;
+        display: inline-block;
+        padding: 0 3px;
+        margin: 0;
+
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .user-menu-wrapper{
+    margin-top: -55px;
+  }
+
+  }
+}
+
+.intro-page {
+  margin-top: -80px;
+  padding-top: 80px;
+
+  &.contact {
+    padding: 170px 0 90px 0;
+    margin-bottom: -40px;
+  }
+
+  @include max-screen(650px) {
+    margin-top: -100px;
+
+    &.contact {
+      padding: 110px 0 30px 0;
+    }
+  }
+}
+
+.subscribe-button {
+  position: relative;
+  width: 280px;
+
+  button {
+    position: absolute;
+    top: 3px;
+    right: 4px;
+  }
+
+  input {
+    width: 100%;
+    padding: 13px 95px 13px 10px;
+  }
+
+  .message {
+    margin-top: 15px;
+  }
+}
+
+.sections-title {
+  margin: 60px 0 45px 0;  
+}
+
+// Home Landing Page
+.home-intro {
+  padding: 90px 0 0 0;
+  overflow: hidden;
+
+  .ctas {
+    @include clearfix; 
+
+     @include max-screen(650px) {
+          margin-right: 90px;
+      }  
+
+      @include max-screen(500px) {
+          margin-right: 0px;
+      } 
+
+    li {
+      float: left;
+      margin-right: 20px;
+
+         @include max-screen(650px) {
+          float: right;
+
+      }  
+
+        @include max-screen(350px) {
+         a {font-size:9px;}
+      }  
+
+    }
+  }
+
+  #countdown {
+    margin: 30px 0;
+
+    .countdown-section {
+      display: inline-block;
+      padding: 0px 20px;
+
+      .countdown-amount {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    @include max-screen(400px) {
+      .countdown-section {
+        padding: 0 8px;
+      }
+    }
+  }
+}
+
+.home-subscribe {
+  padding: 25px 0 35px 0;
+
+  .title {
+    margin-bottom: 15px;
+  }
+
+  .subscribe-button {
+    margin: 0 auto;
+  }
+}
+
+.home-features {
+  padding-bottom: 40px;
+
+  .home-features-title {
+    margin-bottom: 40px;
+  }
+
+  .home-feature {
+    margin-bottom: 20px;
+    padding: 25px 35px;
+    height: 220px;
+
+    .inner {
+      height: 220px;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    img {
+      margin-bottom: 15px;
+    }
+
+    h5 {
+      margin-bottom: 5px;
+    }
+  } 
+}
+
+.subscribe-platforms {
+  padding: 50px 0 55px 0;
+
+  .subscribe-platforms-inner {
+    position: relative;
+  }
+
+  .platforms-illustration {
+    position: absolute;
+    right: 0;
+    bottom: -90px;
+  }
+
+  @include max-screen(900px) {
+    text-align: center;
+
+    .subscribe-button {
+      margin: 0 auto;
+    }
+
+    .platforms-illustration {
+      display: none;
+    }
+  }
+}
+
+.profile-intro {
+  padding: 70px 0 100px 0; 
+
+  .title {
+    margin-bottom: 10px;
+
+    .i {
+      float: left;
+      margin-top: 4px;
+    }
+
+    h1 {
+      margin-left: 55px;
+    }
+  }
+
+  @include max-screen(550px) {
+    .title {
+      .i {
+        float: none;
+        display: block;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin: 0;
+      } 
+    }
+  }
+}
+
+.profile-features {
+  margin-top: -35px;
+  padding-bottom: 40px;
+
+  .profile-feature {
+    margin-bottom: 20px;
+    padding: 25px 35px;
+    height: 330px;
+
+    .inner {
+      height: 330px;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    img {
+      margin-bottom: 15px;
+    }
+
+    h4 {
+      margin-bottom: 5px;
+    }
+
+    ul li {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 0px 5px;
+    }
+  }
+}
+
+.phone {
+  margin-top: -50px;
+  text-align: center;
+
+   @include max-screen(640px) {
+  margin-top: 30px;
+    
+      }  
+}
+
+.stats {
+  margin-top: -35px;
+  p {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  b{
+    color: #a1bc31;
+    font-size: 27px;
+  }
+
+  h2 {
+text-align: center;
+    font-size: 27px;
+}
+
+  .stat{
+    display: block;
+    border-right: 1px solid #d0d0d0;
+
+    @include max-screen(640px) {
+      border: none;
+      padding: 15px 0 15px 0;
+      } 
+  }
+
+   .stat:nth-child(odd) {
+    @include max-screen(640px) {
+      background-color: #e9e9e9;
+      } 
+   }
+
+  .stat-last{
+    margin-left: -4px;
+
+    @include max-screen(640px) {
+      margin: none;
+      padding: 15px 0 15px 0;
+      } 
+  }
+}
+
+#searchfield { 
+  display: block; 
+  width: 100%; 
+  text-align: center; 
+  margin: auto;
+}
+
+
+
+#searchfield  .biginput {
+  opacity: 0.9su;
+  width: 600px;
+  height: 40px;
+  padding: 0 10px 0 10px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff !important;
+  font-weight:normal;
+  font-size: 1.5em;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+
+   @include max-screen(650px) {
+      width: 85%;
+        font-size: 1.2em;
+    }  
+
+  @include max-screen(350px) {
+      width: 85%;
+        font-size: 1em;
+    }  
+}
+
+#searchfield .biginput::-webkit-input-placeholder {
+   color: #fff;
+}
+#searchfield .biginput:-moz-placeholder {
+   color: #fff;
+}
+#searchfield .biginput::-moz-placeholder {
+   color: #fff;
+}
+#searchfield .biginput::-ms-placeholder {
+   color: #fff;
+}
+
+#searchfield .biginput:focus {
+  color: #858585;
+}
+
+.autocomplete-suggestions { background: rgba(255,255,255, 1); cursor: pointer; overflow: hidden; }
+.autocomplete-suggestion { padding: 10px 5px; font-size: 1.2em; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #ebf9ed; }
+.autocomplete-suggestions strong { font-weight: normal; color: #32B846; }
+
+p.player-soccerid{
+  font-size: 14px;
+  line-height: 14px;
+  margin-top: 20px;
+}

@@ -1,0 +1,48 @@
+.primary-table-wrapper {
+  overflow: scroll;
+}
+
+.primary-table {
+  width: 100%;
+
+  thead th {
+    padding: 5px;
+  }
+
+  tbody tr {
+    td {
+      padding: 10px 5px;
+      
+      span.img {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+ .primary-table tbody tr td:nth-child(2) {
+        width: 140px !important;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+         @include max-screen(930px) {
+          width: 140px;
+        }
+         @include max-screen(730px) {
+           width: 140px;
+        }
+         @include max-screen(640px) {
+           width: 140px;
+        }
+         @include max-screen(400px) {
+           width: 140px;
+        }
+           @include max-screen(350px) {
+         width: 140px; 
+       }
+}
