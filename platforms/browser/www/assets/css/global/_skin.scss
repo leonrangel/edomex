@@ -311,7 +311,7 @@ h6, .h6 {
   
       &.active a {
         opacity: .5;
-        background-color: shade($primary-color, 15%);
+        background-color: #922a57!important;
         box-shadow: -1px 0 0 rgba(255, 255, 255, .25), 1px 0 0 rgba(255, 255, 255, .25);
       }
       

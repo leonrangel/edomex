@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.somosfut.app" version="2.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.edomex.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
     <feature name="Camera">
         <param name="browser-package" value="Camera" />
     </feature>
@@ -9,9 +9,9 @@
     <feature name="BarcodeScanner">
         <param name="browser-package" value="BarcodeScanner" />
     </feature>
-    <name>SOMOSFUT</name>
+    <name>FUTxEDOMEX</name>
     <description>Main SomosFut mobile application.</description>
-    <author email="leon@somosfut.com" href="http://somosfut.com">SOMOSFUT</author>
+    <author email="rafael@somosfut.com" href="http://somosfut.com">SOMOSFUT</author>
     <access origin="*" />
     <icon src="res/icon.png" />
     <splash src="res/splash.png" />
